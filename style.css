@@ -1,0 +1,26 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+h1{
+    /* border: 1px solid black; */
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+h2{
+    /* border: 1px solid black; */
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+h3{
+    /* border: 1px solid black; */
+    font-weight: lighter;
+    margin-left: 1em;
+    margin-top: 0;
+    margin-bottom: 0 ;
+}
+ul{
+    /* border: 1px solid black; */
+    margin-top: 0;
+}

@@ -1,0 +1,11 @@
+As you can see, the <head> section of the page is empty. Using the resources that you have explored in the readings for this part of the lesson, populate the head section with code that will provide the following information.
+
+1. Setting the page to refresh every two minutes.
+2. Setting the page text encoding to UTF-8, to ensure that a wide variety of characters and symbols can be used and later styled with a font style of choice.
+3. Setting the name of the author of the page.
+4. Setting the description of the page that search engines can show
+5. Setting keywords that are relevant to the contents of the page that can be used by search engines to find the page.
+6. If you predict that your page is being constructed for a particular usage context and therefore most likely to be used on a particular class of device (e.g. smartphone, tablet, desktop, presentation display), define the viewport width and scaling that would define how the page is initially displayed
+
+
+Save the document and share it with your colleagues in a discussion on your Tutor group discussion forum. Explain to your peers why you have chosen the attributes for the tags that you have and discuss their choices. 

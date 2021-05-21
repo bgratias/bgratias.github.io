@@ -85,8 +85,8 @@ function draw()
 {
 	//TASK: update the values for the moons brightness, the sun's position and the darkness.
 	//You can either map this to the mouse's location (i.e. the futher left the mouse is the more daylight) or you can just change the values gradually over time.
-	moon.brightness = map(mouseX,0,width,0,255)
-	darkness = map(min(mouseX,width),0,width,0,180)
+	moon.brightness = map(mouseX,0,width,0,255);
+	darkness = map(min(mouseX,width),0,width,0,180);
 	sun.drop = map(min(mouseX,width),0,width,sun.y,groundHeight+sun.diameter);
 
 	//draw the sky
@@ -96,7 +96,7 @@ function draw()
 	//Stars
 	push();
 	for (; star.count < star.total; star.count++) {
-		star.x=random(0,width)
+		star.x=random(0,width);
 		star.y=random(0,groundHeight);
 		stroke(255);
 		strokeWeight(3);
@@ -125,8 +125,8 @@ function draw()
     //TASK: You can draw the tree yourself
 	fill(139,69,19);
 	rect(tree.x-tree.trunkWidth/2,tree.y-tree.trunkHeight,tree.trunkWidth,tree.trunkHeight);
-	fill(0,100,0)
-	ellipse(tree.x,tree.y-tree.trunkHeight,tree.canopyWidth,tree.canopyHeight)
+	fill(0,100,0);
+	ellipse(tree.x,tree.y-tree.trunkHeight,tree.canopyWidth,tree.canopyHeight);
 
 	//TASK: make the scene dark by drawing a rectangle that covers the whole canvas.
 	//Use the alpha value of fill to determine how dark to make it
@@ -144,11 +144,14 @@ function draw()
 
 
 	//cloud
-	fill(map(darkness,0,255,255,200),map(darkness,0,255,255,200))
-	ellipse(cloud.x,cloud.y,100,80)
-	ellipse(cloud.x+50,cloud.y-10,70,70)
-	ellipse(cloud.x+100,cloud.y,80,80)
+	fill(map(darkness,0,255,255,200),map(darkness,0,255,255,200));
+	ellipse(cloud.x,cloud.y,100,80);
+	ellipse(cloud.x+50,cloud.y-10,70,70);
+	ellipse(cloud.x+100,cloud.y,80,80);
 	cloud.x=cloud.x+cloud.rate;
-	
-	console.log(y);
+
+}
+
+function mousePressed(){
+	cloud.x=-150;
 }

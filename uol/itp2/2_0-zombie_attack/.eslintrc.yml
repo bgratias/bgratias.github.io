@@ -1,0 +1,24 @@
+env:
+  browser: true
+  es6: true
+extends: 'eslint:recommended'
+rules:
+  indent:                       # This should match brackets.
+    - error
+    - tab
+  no-unused-vars:               # For defining p5 setup and draw etc.
+    - off
+  no-undef:                     # For calling p5 globalise
+    - off
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  no-tabs:
+    - error
+    - allowIndentationTabs: true

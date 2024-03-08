@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Web crawling robot instructions-->
+    <meta name="robots" content="index"> <!--Request robots to index this page-->
+
+    <!-- page information -->
+    <title>ITP2-Data Visualisation Project</title>
+    <meta name="author" content="BGG">
+    <meta name="title" content="ITP2-Data Visualisation Project">
+    <meta name="description" content="Five selected visualisations of various data sets.">
+    <meta name="keywords" content="P5.js, Data Visualisation, ITP"> <!--keywords for SE-->
+
+    <!--External Resources-->
+    <meta name="msapplication-TileColor" content="#111144">
+    <!-- favicon made by https://www.flaticon.com/authors/deemakdaksina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/fav-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/fav-icons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+        
+    <!-- Libraries -->
+    <script src="/lib/p5.js"></script>
+    <script src="/lib/p5.sound.js"></script>
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Main sketch file -->
+    <script src="/js/sketch.js"></script>
+
+    <!-- Helper scripts -->
+    <script src="/js/helper-functions.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/pie-chart.js"></script>
+    <script src="/js/pie-chart.js"></script>
+
+    <!-- Visualisations -->
+    <script src="/js/visualizations/covid-vaccinations.js"></script>
+    <script src="/js/visualizations/tech-diversity-gender.js"></script>
+    <script src="/js/visualizations/rising-sea-levels.js"></script>
+    <script src="/js/visualizations/tech-diversity-race.js"></script>
+    <script src="/js/visualizations/climate-change.js"></script>
+  </head>
+
+
+  <body>
+    <header></header>
+    <main>
+
+      <div class="container">
+
+        <div id="navigation">
+          <ul id="visuals-menu">
+            <!-- Menu items here -->
+          </ul>
+        </div>
+
+        <div id="app" class="hidden" >
+          <!-- P5 Sketch here (id='defaultCanvas0' class ='p5Canvas') -->
+        </div>
+
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </body>
+
+  
+</html>

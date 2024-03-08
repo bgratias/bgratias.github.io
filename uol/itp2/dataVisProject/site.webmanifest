@@ -1,0 +1,15 @@
+{
+    "short_name": "DataViz",
+    "name":"Brent's Data Vizualization App",
+    "icons": [
+        {
+            "src":"images/fav-icons/apple-touch-icon.png",
+            "sizes":"180x180",
+            "type":"image/png"
+        }
+    ],
+    "theme_color":"#64dcfe",
+    "background_color":"#111144",
+    "display":"standalone",
+    "description": "ITP2 Data Vizualization Application"
+}

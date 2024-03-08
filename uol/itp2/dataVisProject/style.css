@@ -1,0 +1,176 @@
+/* Definition of Global variables */
+:root {
+    
+    /* Theme Colours */
+    --deepblue: #111144;
+    --white:    #dcdcdc; 
+    --blue:     #64dcfe;
+    --yellow:   #f8f2b4;
+    --green:    #a3fbc7;
+    --purple:   #aaa9ff;
+    --red:      #fd76af;
+    
+    /* Theme Font */
+    --theme-font: 'Montserrat', sans-serif;
+    
+    /* Theme Size and Spacing */
+    --space-s: 0.5rem;
+    --space-m: calc(2 * var(--rem-s));
+    --space-l: calc(2 * var(--rem-m));
+    --space-xl: calc(2 * var(--rem-l));
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--theme-font);
+    font-weight: 200;
+}
+
+html {
+    background-color: var(--deepblue);
+
+    /* all 'rem' sizes are based on this base font size */
+    font-size: 18px;
+
+    /* element's width & height to include border and padding, content will adjust */
+    box-sizing: border-box;
+
+    /* even if screen is wider, page content will not exceed */
+    max-width: 2048;
+
+    /* center content btw left/right screen limits */
+    margin: auto;
+}
+  
+
+body{
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+select{
+    outline: none;
+}
+
+
+.container {
+    display: flex;
+}
+
+#navigation {
+    margin-right: 3%;
+}
+
+#visuals-menu {
+    cursor: pointer;
+}    
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    width: 250px;
+    height: 50px;
+    padding: 5px;
+
+    color: var(--white);
+
+    list-style-type: none;
+
+    transition: font-size .4s, color .4s ease 0s;
+}    
+.hover {
+    font-size: 110%;
+}
+.selected{
+    color: var(--blue);
+    font-weight: 500;
+}
+
+
+#app {
+    margin: auto;
+    position: relative;
+    /* border: 1px solid darkgrey; */
+}
+.hidden{
+    opacity: 0;
+}
+.visible{
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+/* Animation definition */
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+/* This ID is added automatically by p5.js */
+#defaultCanvas0 {
+    /* add display property to prevent scroll bars in some browsers */
+    /* https://github.com/processing/p5.js/wiki/Positioning-your-canvas */
+    display: block;
+}        
+
+
+
+/* Mobile Layout Changes */
+@media only screen and (max-width: 600px){
+
+    html{
+        font-size: 12px;
+    }
+
+    body{
+        padding-top: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #navigation {
+        margin-right: 0;
+        margin-top: 5%;
+        width: 100%;
+    }
+        
+    .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 100%;
+        height: 40px;
+    }    
+    
+}
+
+
+
+/* To facilitate self-hosting Google Font - 'Montserrat' */
+
+/* Copyright 2011 The Montserrat Project Authors 
+(https://github.com/JulietaUla/Montserrat) */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v18-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('fonts/montserrat-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/montserrat-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/montserrat-v18-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}

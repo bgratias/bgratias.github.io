@@ -1,0 +1,333 @@
+/* attractions.css by Brent Gratias */
+
+/*****************************************************************/
+/**   Global Page Styles
+/*****************************************************************/
+
+.attractions-container {
+  /* max-width Prevents content from spreading and all across a wide page */
+  max-width: var(--content-width);
+  /* margin: auto automatically adjusts margins to center on page */
+  margin: auto;
+}
+
+.attractions-container h2 {
+  /* Using variables declared in main.css ensures consistency across the site */
+  font-family: var(--font-headings);
+  font-size: 45px;
+  /* Official site colours are declared as variables in main.css */
+  /* This page's dominant elements are parc-orange to match the parc-orange attraction button
+          /* This gives the user a subconscious signpost to tell where he is in the site */
+  color: var(--parc-orange);
+  /* spacing is declared in main.css -s, -l, -xl are all products of a base unit 
+          size giving the site a balanced feel that is more pleasing to the eye */
+  margin: var(--space-xl) var(--space-xl) var(--space-l);
+  text-align: center;
+}
+
+.attractions-container h3 {
+  font-family: var(--font-headings);
+  color: var(--parc-orange);
+  font-size: 30px;
+  padding-top: var(--space-xl);
+  margin-top: 0;
+  margin-bottom: var(--space-s);
+  border-bottom: solid var(--space-s) var(--parc-orange);
+}
+
+.attractions-container h4 {
+  font-family: var(--font-headings);
+  color: var(--parc-red);
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/*****************************************************************/
+/**   Page Introduction Section
+/*****************************************************************/
+
+.attractions-page-introduction p {
+  /* regardless of what the screen width is the paragraph will fill 80% of that width*/
+  width: 80%;
+  /* margin auto will center the content regardless of screen width */
+  margin: auto;
+}
+
+/* Animate our slogan to "magically" slide in from the left */
+
+/* define the name of the animation */
+@keyframes slide_in {
+  /* set the start point */
+  from {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  /* set the finish point */
+  to {
+    margin-left: 40%;
+    opacity: 1;
+  }
+}
+
+.attractions-slogan {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--parc-red);
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
+
+  /* set animation parameters */
+  animation-name: slide_in;
+  animation-delay: 600ms;
+  animation-duration: 2s;
+  /* fill-mode determines how the text will look before and after the animation.
+          In this case we want it to use the formatting for the first frame during the delay = backwards.
+          We also want it to retain the formatting for the last frame after the animation = forwards.
+          fill-mode: both = backwards AND forwards */
+  animation-fill-mode: both;
+}
+
+/*****************************************************************/
+/**   Page Navigation Section
+/*****************************************************************/
+
+/* HTML Note /* The page navigation simply hyperlinks to section headings further down the same page
+We only have a few articles in each section so the page is not very large, but once we 
+add all our new rides, the page could become quite large and these navigation buttons will
+become more useful */
+
+.attractions-page-nav ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.attractions-page-nav li {
+  /* inline-block allows us to put our buttons one after another in a row */
+  display: inline-block;
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
+  padding: var(--space-s);
+  /* round the corners for a nice button look */
+  border-radius: var(--radius);
+  /* Official site colours are declared as variables in main.css
+          This page's dominant elements are parc-orange to match the parc-orange attraction button
+          This gives the user a subconscious signpost to tell where he is in the site */
+  background-color: var(--parc-orange);
+}
+
+.attractions-page-nav a {
+  text-align: center;
+  font-weight: 700;
+  color: var(--parc-text-contrast);
+  /* these are links so by default would have an underline to identify them
+          we want them to look more button so setting text-decoration to none = no underline */
+  text-decoration: none;
+}
+
+.attractions-page-nav a:hover {
+  /* use a change in colour to indicate to the user that this is a button that can be clicked */
+  color: var(--parc-red);
+}
+
+/* Animate our buttons to "magically" appear
+This will draw the attention of the user to these useful buttons in a dignified way 
+and also plays on our slogan about magic.*/
+
+/* define the name of the animation */
+@keyframes fade_in {
+  /* set the starting opacity at invisible*/
+  from {
+    opacity: 0;
+  }
+  /* set the finishing opacity at 100% visible*/
+  to {
+    opacity: 1;
+  }
+}
+
+/* Set the animation parameters */
+
+/* All the buttons have these properties in common so we use a wildcard class
+selector to select them */
+[class^="attractions-animated-button"] {
+  animation-name: fade_in;
+  animation-duration: 1900ms;
+  animation-timing-function: ease-in;
+  /* fill-mode determines how the button will look before and after the animation.
+          In this case we want each button to be invisible while it counts down the delay.  
+          Therefore we want the opacity setting for the first frame to be applied backwards
+          to the button before the animation begins.  After the animation is completed
+          it will default back to the original setting of 100% opacity and stay there.*/
+  animation-fill-mode: backwards;
+}
+
+/* Each button has a slightly different delay so we select and set them individually */
+.attractions-animated-button1 {
+  animation-delay: 1800ms;
+}
+
+.attractions-animated-button2 {
+  animation-delay: 2200ms;
+}
+
+.attractions-animated-button3 {
+  animation-delay: 2400ms;
+}
+
+.attractions-animated-button4 {
+  animation-delay: 3000ms;
+}
+
+/*****************************************************************/
+/**   Main Content Section - Grid Definition
+/*****************************************************************/
+
+/* The grid container defines the structure of our page grid */
+
+.attractions-grid-container {
+  display: grid;
+  /* auto allows each column to adjust its size so that no matter the width they will all be equal */
+  grid-template-columns: auto auto auto;
+  /* our template is a header for each section that crosses all three columns
+          then articles are displayed each in their own column */
+  grid-template-areas:
+    "grid_header_section01 grid_header_section01 grid_header_section01"
+    "grid_section01_article01 grid_section01_article02 grid_section01_article03"
+    "grid_header_section02 grid_header_section02 grid_header_section02"
+    "grid_section02_article01 grid_section02_article02 grid_section02_article03"
+    "grid_header_section03 grid_header_section03 grid_header_section03"
+    "grid_section03_article01 grid_section03_article02 grid_section03_article03"
+    "grid_header_section04 grid_header_section04 grid_header_section04"
+    "grid_section04_article01 grid_section04_article02 grid_section04_article03";
+  margin-bottom: var(--space-xl);
+}
+
+/* now we define what content goes into each grid area that we defined */
+.attractions-grid-header-section01 {
+  grid-area: grid_header_section01;
+}
+
+.attractions-grid-section01-article01 {
+  grid-area: grid_section01_article01;
+}
+
+.attractions-grid-section01-article02 {
+  grid-area: grid_section01_article02;
+}
+
+.attractions-grid-section01-article03 {
+  grid-area: grid_section01_article03;
+}
+
+.attractions-grid-header-section02 {
+  grid-area: grid_header_section02;
+}
+
+.attractions-grid-section02-article01 {
+  grid-area: grid_section02_article01;
+}
+
+.attractions-grid-section02-article02 {
+  grid-area: grid_section02_article02;
+}
+
+.attractions-grid-section02-article03 {
+  grid-area: grid_section02_article03;
+}
+
+.attractions-grid-header-section03 {
+  grid-area: grid_header_section03;
+}
+
+.attractions-grid-section03-article01 {
+  grid-area: grid_section03_article01;
+}
+
+.attractions-grid-section03-article02 {
+  grid-area: grid_section03_article02;
+}
+
+.attractions-grid-section03-article03 {
+  grid-area: grid_section03_article03;
+}
+
+.attractions-grid-header-section04 {
+  grid-area: grid_header_section04;
+}
+
+.attractions-grid-section04-article01 {
+  grid-area: grid_section04_article01;
+}
+
+.attractions-grid-section04-article02 {
+  grid-area: grid_section04_article02;
+}
+
+/*****************************************************************/
+/**   Article Headers
+/*****************************************************************/
+
+.attractions-grid-container h4 {
+  margin: var(--space-m);
+  text-align: center;
+}
+
+/*****************************************************************/
+/**   Articles
+/*****************************************************************/
+
+.attractions-grid-container article {
+  margin: var(--space-s);
+  padding: var(--space-m);
+  /* the border and background colour serve to tell the user that each article
+          is stand-alone content.  It should be very clear what information belongs to what ride. */
+  border: solid 2px var(--parc-orange);
+  border-radius: 10px;
+  /* We use the rgba colour format to allow us to change the opacity of our background colour.
+          We use rgba instead of the opacity tag because the opacity tag changes the opacity of 
+          everything inside the element including our text and images. */
+  background-color: var(--parc-opacity-background);
+  /* adding a shadow to the article gives it a 3D feel and further isolates it from adjacent
+          articles strongly conveying to the user that it is stand-alone content */
+  box-shadow: var(--parc-box-shadow-2);
+}
+
+.attractions-grid-container img {
+  /* display block prevents our text from flowing around our image */
+  display: block;
+  margin: auto;
+  /* border radius give our pictures rounded corners - nice */
+  border-radius: 10px;
+  /* add a bit of shadow to give a 3d feel to the image */
+  box-shadow: var(--parc-box-shadow-2);
+}
+
+/* List of ride requirements */
+ul.attractions-ride-reqs {
+  padding-left: var(--space-l);
+  /* get rid of the bullets */
+  list-style-type: none;
+}
+
+ul.attractions-ride-reqs li {
+  margin-right: var(--space-s);
+  margin-bottom: var(--space-s);
+  vertical-align: middle;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size-smallprint);
+  font-weight: lighter;
+  color: var(--parc-text-main);
+}
+
+/* special characters used in ride requirements list */
+i.material-icons {
+  /* negative left margin to create a hanging indent */
+  margin-left: -20px;
+  /* since the special characters may be different size than the text, vertical center */
+  vertical-align: middle;
+  font-size: var(--font-size);
+  font-weight: bold;
+  color: var(--parc-red);
+}

@@ -1,0 +1,171 @@
+.home-layout {
+  max-width: var(--content-width);
+  margin: 0 auto; /* automatically adjusts margins to center on page */
+}
+
+.home-title {
+  font-family: var(--font-headings);
+  font-size: 45px;
+  color: var(--parc-blue);
+  text-align: center;
+  position: relative;
+  animation: index_animation 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.home-container h2 {
+  font-family: var(--font-headings);
+  color: var(--parc-blue);
+  font-size: 30px;
+  padding-top: var(--space-l);
+}
+
+.home-container h3 {
+  font-family: var(--font-headings);
+  color: var(--parc-green);
+  font-size: 27px;
+}
+
+.home-container li span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.home-container section {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  display: flex;
+  align-items: center;
+}
+
+/* 
+==================== Animation is here =======================
+*/
+
+/* set text color changing and position */
+@keyframes index_animation {
+  0% {
+    color: var(--parc-blue);
+    left: 0;
+  }
+  25% {
+    color: var(--parc-green);
+    left: 200px;
+  }
+  50% {
+    color: var(--parc-orange);
+    /* left: 0; */
+  }
+  75% {
+    color: var(--parc-red);
+    left: -200px;
+  }
+  100% {
+    font-size: 45px;
+    color: var(--parc-blue);
+    left: 0;
+  }
+}
+
+.home-img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.home-banner-container {
+  max-width: 1920px;
+  margin: var(--space-xl) auto var(--space-xl);
+}
+
+.home-banner {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-top: calc(5 / 16 * 100%);
+}
+
+.home-banner img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+}
+
+/* ==========================
+        Content Cards
+  =========================== */
+
+/* setting of class contentCard, set size and border radius */
+/* add shadow by adding box-shadow  */
+.home-content-card {
+  width: 277px;
+  height: 500px;
+  border-radius: 10%;
+  box-shadow: var(--parc-box-shadow-1);
+}
+
+/* set class contentCard tag p */
+/* ====================================
+        Set x, y, z position here
+  ===================================== */
+.home-content-card p {
+  /* text-align: center; */
+  position: relative;
+  top: 0;
+  left: 20%;
+  z-index: 1;
+  font-weight: 900;
+  color: white;
+  font-family: inherit;
+  font-size: xx-large;
+}
+
+/* setting for id=cards */
+/* set size, arrange position of elements  */
+
+/* 
+======================================= 
+    Use Grids to arrange cards here
+=======================================
+*/
+
+#home-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#home-cards div {
+  margin: 0 auto;
+}
+
+#home-card1 {
+  background-color: var(--parc-red);
+}
+
+#home-card2 {
+  background-color: var(--parc-blue);
+}
+
+#home-card3 {
+  background-color: var(--parc-orange);
+}
+
+#home-park-info div {
+  max-width: 50%;
+  font-size: 20px;
+  min-width: unset;
+  padding: 0 10px;
+  flex: 1;
+}
+
+[class^="con"] img {
+  border-radius: 10% 10% 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightcyan;
+  }
+}

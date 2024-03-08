@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ParcParc Information</title>
+    <meta
+      name="description"
+      content="Parc Park, discover the magic. Come and become a child again, or take your child and experience the best fun in the world. "
+    />
+    <!--Google Fonts-->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Aleo:wght@400;700&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/information.css" rel="stylesheet" />
+    <link
+      href="images/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="images/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <!--Theme Switch
+      This checkbox is responsible for enabling high contrast accessible mode.
+      The accessibility was verified with the Lighthouse test.
+      JavaScript for switching the theme is at the bottom of the file.
+      We use CSS variables to modify the colors on the page.
+    -->
+      <div class="main-theme-switch-wrapper">
+        <label class="main-theme-switch" for="theme-switch-checkbox">
+          <input id="theme-switch-checkbox" type="checkbox" />
+          <em>Enable Accessibility Mode!</em>
+        </label>
+      </div>
+      <!--All the essential links for navigating the page -->
+      <a class="main-header-logo" href="index.html">
+        <img alt="ParcParc Logo" src="images/logo.svg" />
+        <div>
+          <h1>ParcPark</h1>
+          <p>Discover the magic</p>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a class="main-button main-button-blue" href="index.html"> Home </a>
+          </li>
+          <li>
+            <a class="main-button main-button-orange" href="attractions.html">
+              Attractions
+            </a>
+          </li>
+          <li>
+            <a class="main-button main-button-green" href="information.html">
+              Park Information
+            </a>
+          </li>
+        </ul>
+        <!--Following Button opens a Modal with "confirmation" of the purchase.
+         The HTML and JavaScript for opening/closing of the modal are at the bottom of the page.
+        -->
+        <button class="main-button main-button-red" onclick="toggleModal()">
+          Buy Tickets
+        </button>
+      </nav>
+    </header>
+    <!-- Information by Damian -->
+    <main class="information-container">
+      <!-- Information page introduction
+      this section is on the middle
+      -->
+      <section class="information-page-introduction">
+        <h2>ParcPark - Information</h2>
+        <p>
+          Thank you for your interest in ParcPark! We hope you will enjoy your
+          trip. We recommend wearing comfortable, quick-drying clothes- some of
+          the fun attractions have splashing water. As the day of fun goes by
+          and the evening cools off, you might want to have a sweater handy.
+          Comfortable shoes are the key to long lasting fun as you walk around
+          the park. Remember to stay hydrated and eat a good breakfast or enjoy
+          a meal in one of our park concessions. If you have any questions
+          please contact us!
+        </p>
+      </section>
+      <!-- opening hours
+  this section is a table on the right
+   -->
+      <section id="information-opening-hours">
+        <h3>Opening Hours</h3>
+        <table>
+          <tr>
+            <th>Monday</th>
+            <td>11am - 9pm</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td>11am - 9pm</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>11am - 9pm</td>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>11am - 9pm</td>
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td>9am - 11:30pm</td>
+          </tr>
+          <tr>
+            <th>Saturday</th>
+            <td>9am - 11:30pm</td>
+          </tr>
+          <tr>
+            <th>Sunday</th>
+            <td>11am - 9pm</td>
+          </tr>
+        </table>
+      </section>
+      <!-- Contact information
+  this section is on the left, and it floats to the left side by side with opening hours
+   -->
+      <section id="information-contact-info">
+        <h3>Contact Information</h3>
+        <p><b>Call us:</b> 123-456-7890</p>
+        <p><b>Email:</b> info@parcpark.com</p>
+      </section>
+      <!-- Price table -->
+      <section id="information-prices">
+        <h3>Prices</h3>
+        <table>
+          <tr>
+            <th></th>
+            <th>Adults</th>
+            <th>Kids</th>
+          </tr>
+          <tr>
+            <th>All day (most popular choice)</th>
+            <td>$30</td>
+            <td>$20</td>
+          </tr>
+          <tr>
+            <th>Evening Magic (after 6pm)</th>
+            <td>$15</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <th>Weekend trip (3 day ticket)</th>
+            <td>$50</td>
+            <td>$25</td>
+          </tr>
+        </table>
+      </section>
+      <!--Address and transit information
+  this section contains two parts
+  -->
+      <section id="information-address-and-driving">
+        <h3>Address and driving directions</h3>
+        <div id="information-address">
+          <div id="information-address-text">
+            <!-- to separate text and map -->
+            <h4>Address</h4>
+            <p>
+              123 Imagine Drive <br />
+              Magic City, 123-456 <br />
+              Republic of United Unicorns
+            </p>
+          </div>
+          <div id="information-address-map">
+            <!-- to separate text and map -->
+            <a
+              href="https://www.google.com/maps/place/Calaway+Park/@51.0790964,-114.3495955,10.75z/data=!4m5!3m4!1s0x53717001d3d6d997:0x2ba2938ef3d41fd4!8m2!3d51.0862043!4d-114.3565181"
+              target="_blank"
+            >
+              <!-- i took the picture and edited from:
+                          reference link https://www.google.com/maps/place/Calaway+Park/@51.0790964,-114.3495955,10.75z/data=!4m5!3m4!1s0x53717001d3d6d997:0x2ba2938ef3d41fd4!8m2!3d51.0862043!4d-114.3565181
+                          -->
+              <img
+                alt="Map Image - location of the park on the city map"
+                id="information-city-map-img"
+                src="images/information/city-map.jpg"
+              />
+            </a>
+          </div>
+        </div>
+        <h4>Driving directions</h4>
+        <div id="information-directions">
+          <div class="information-column">
+            <h5>From the North</h5>
+            <p>
+              If you are North from our park, simply head South - follow your
+              compass and you will not miss it. Discovering the magic starts
+              with discovering directions.
+            </p>
+          </div>
+          <div class="information-column">
+            <h5>From the South</h5>
+            <p>
+              Similar to coming from the North but opposite! So just go up, not
+              down. Our park will be on the right as you pass Mountain of
+              Wisdom. Just follow the trail.
+            </p>
+          </div>
+          <div class="information-column">
+            <h5>From the East</h5>
+            <p>
+              Turn left, turn right, take 3 steps back, clap your hands, stand
+              on one foot for 5 seconds and then roll forward 10 times. You know
+              there are never too many times to roll. After that, you should be
+              able to see our entrance.
+            </p>
+          </div>
+          <div class="information-column">
+            <h5>From The West</h5>
+            <p>
+              Turn right, turn left...just kidding go left...I mean right?? You
+              will find us. Good luck!
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Map -->
+      <section id="information-map">
+        <h3>Map</h3>
+        <!-- I took and edited picture from https://www.calawaypark.com/wp-content/uploads/2021/06/Map.pdf -->
+        <a href="images/information/park-map.jpg" target="_blank">
+          <img
+            alt="Map of the park layout"
+            id="information-map-img"
+            src="images/information/park-map.jpg"
+          />
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer by Max Sergueev -->
+    <!-- Starts the defined area of the footer -->
+    <footer class="main-footer">
+      <div class="main-footer-container">
+        <h3 class="main-footer-slogan">ParcPark: Discover the Magic</h3>
+        <nav>
+          <!--Site Navigation by Jedrzej Lewandowski, edited by Max for footer-->
+          <span>
+            <a class="main-button main-button-orange" href="index.html">
+              Home
+            </a>
+            <a class="main-button main-button-orange" href="attractions.html">
+              Attractions
+            </a>
+            <a class="main-button main-button-orange" href="information.html">
+              Park Information
+            </a>
+          </span>
+        </nav>
+        <address>
+          <p>123 Imagine Drive</p>
+          <p>Magic City, 123-456</p>
+          <p>Republic of United Unicorns</p>
+          <a href="mailto:parc@parcpark.com">parc@parcpark.com</a>
+        </address>
+        <img
+          alt="social media icons of facebook, twitter and instagram"
+          class="main-footer-social-icons"
+          src="images/social_media_icons.svg"
+        />
+        <p class="main-copyright">
+          © Copyright ParcPark | Developed by web-development-team81
+        </p>
+      </div>
+    </footer>
+    <!--Modal By Jedrzej Lewandowski -->
+    <!--The modal below will appear on the page only if the user clicks on the button "Buy Tickets," by default,
+    style is applied, which makes it not visible to the user.
+    However, on button click, the CSS class is added, which makes the modal visible.-->
+    <div class="main-buy-tickets-overlay" id="modal">
+      <div class="main-buy-tickets-modal">
+        <h1>Awesome!</h1>
+        <p>We can't wait to see you in our park</p>
+        <button class="main-button main-button-green" onclick="toggleModal()">
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- JavaScript for enabling some advance user interface.
+        - The "toggleModal" function is used to add/remove the CSS class to make the modal visible on the page
+          It is triggered by the button on top of the page in the header and the modal to close it.
+        - The "switchTheme" function is attached to the document's event listener to see if the checkbox on top of the page changed the value. 
+          The checkbox serves as a theme switcher to allow a user to see the page in accessibility mode. 
+    -->
+    <script>
+      function toggleModal() {
+        document
+          .getElementById("modal")
+          .classList.toggle("main-buy-tickets-visible");
+      }
+
+      const toggleSwitch = document.getElementById("theme-switch-checkbox");
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      }
+
+      toggleSwitch.addEventListener("change", switchTheme, false);
+    </script>
+  </body>
+</html>

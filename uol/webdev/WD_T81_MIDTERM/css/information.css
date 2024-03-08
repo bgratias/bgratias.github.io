@@ -1,0 +1,138 @@
+/* information.css by Damian Binkowski */
+.information-container {
+  max-width: var(--content-width);
+  margin: auto; /* automatically adjusts margins to center on page */
+}
+
+/* uniform styling using var for colors and spaces that are consistent in the website */
+.information-container h2 {
+  font-family: var(--font-headings);
+  font-size: 45px;
+  color: var(--parc-green);
+  margin: var(--space-xl) var(--space-xl) var(--space-l);
+  text-align: center;
+}
+
+.information-container h3 {
+  font-family: var(--font-headings);
+  color: var(--parc-green);
+  font-size: 30px;
+  padding-top: var(--space-l);
+  margin-bottom: var(--space-s);
+}
+
+.information-container h4 {
+  font-family: var(--font-text);
+  color: var(--parc-green);
+  font-size: 27px;
+}
+
+.information-container h5 {
+  font-family: var(--font-text);
+  color: var(--parc-green);
+  font-size: 20px;
+}
+
+/* specific styling to website items, css is in order to match the website order*/
+/* id names are the same as headings of items*/
+.information-page-introduction p {
+  width: 80%;
+  margin: auto;
+}
+
+#information-opening-hours {
+  float: right;
+  margin-right: 10%;
+}
+
+#information-contact-info {
+  float: left;
+}
+
+#information-prices {
+  float: left;
+}
+
+#information-prices h3 {
+  margin-bottom: 0;
+}
+
+/* th and td is used to style the price table*/
+th {
+  text-align: left;
+  padding: 15px;
+}
+
+td {
+  text-align: center;
+}
+
+#information-address-and-driving {
+  float: left;
+}
+
+#information-address-and-driving h3 {
+  padding-bottom: var(--space-l);
+}
+
+#information-address-and-driving h4 {
+  margin-bottom: 0;
+}
+
+#information-address {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: var(--space-l);
+  text-align: center;
+}
+
+#information-address-text {
+  border: 15px solid #ace184;
+  border-radius: 50px;
+  padding: var(--space-xl);
+}
+
+/* the container*/
+#information-address-map {
+  align-content: center;
+}
+
+/*image of the address*/
+#information-city-map-img {
+  border: 15px solid #ace184;
+  border-radius: 50px;
+}
+
+#information-address p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#information-directions {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: var(--space-xl);
+}
+
+/* columns are in a driving directions, there are 4 boxes */
+.information-column h5 {
+  margin-bottom: 0;
+}
+
+.information-column p {
+  margin-top: 5px;
+}
+
+#information-map h3 {
+  float: left;
+}
+
+/* park map to be full width of the content */
+#information-map-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#information-map-img:hover {
+  opacity: 60%;
+}

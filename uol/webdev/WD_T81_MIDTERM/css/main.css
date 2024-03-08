@@ -1,0 +1,316 @@
+/* Start of CSS by Jedrzej Lewandowski */
+/*
+ Global variables to share across the whole website
+ */
+:root {
+  --parc-green: #7ad03a;
+  --parc-red: #fc0303;
+  --parc-orange: #ffba00;
+  --parc-blue: #2ea2cc;
+  --parc-background: rgba(254, 254, 254, 1);
+  --parc-text-bright: rgba(255, 255, 255, 0.67);
+  --parc-opacity-background: rgba(255, 186, 0, 0.3);
+  --parc-text-dark: black;
+  --parc-text-contrast: white;
+  --parc-text-main: var(--parc-text-dark);
+  --parc-dark-blue: #093a61;
+  --font-headings: "Luckiest Guy", cursive;
+  --font-text: "Aleo", serif;
+  --font-size: 16px;
+  --font-size-smallprint: 12px;
+  --content-width: 950px;
+  --space-s: 0.4rem;
+  --space-m: calc(2 * var(--space-s));
+  --space-l: calc(2 * var(--space-m));
+  --space-xl: calc(2 * var(--space-l));
+  --radius: 4px;
+  --parc-box-shadow-1: 10px 10px 5px #888888;
+  --parc-box-shadow-2: 10px 10px 5px grey;
+}
+
+[data-theme="dark"] {
+  --parc-background: rgba(18, 18, 18, 1);
+  --parc-text-contrast: var(--parc-text-dark);
+  --parc-text-main: var(--parc-text-bright);
+  --parc-opacity-background: rgba(20, 20, 20, 1);
+  --parc-box-shadow-1: 10px 10px 10px rgba(0, 0, 0, 1);
+  --parc-box-shadow-2: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+/* 
+General styles to standardize css behaviour across the whole page 
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  margin: 0;
+  font-size: var(--font-size);
+  overflow: auto;
+  background-color: var(--parc-background);
+  color: var(--parc-text-main);
+  transition: background-color 300ms ease;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+Header Styles
+*/
+
+.main-header {
+  max-width: var(--content-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-m);
+  width: 100%;
+}
+
+.main-theme-switch-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-theme-switch {
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.main-theme-switch:hover {
+  text-decoration: underline;
+}
+
+.main-header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-headings);
+  text-decoration: none;
+  color: var(--font-text);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 660px) {
+  .main-header-logo {
+    justify-content: center;
+  }
+}
+
+.main-header-logo img {
+  max-width: 300px;
+  width: 100%;
+  margin-right: var(--space-m);
+  flex: auto;
+}
+
+.main-header-logo h1 {
+  font-size: clamp(2rem, 10vw, 5rem);
+  margin: 0;
+  color: var(--parc-blue);
+}
+
+.main-header p {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--parc-red);
+}
+
+.main-header nav {
+  padding-top: var(--space-l);
+  font-size: 16px;
+  top: 5px;
+  display: flex;
+  align-items: baseline;
+}
+
+.main-header nav ul {
+  display: grid;
+  flex: 1 1 auto;
+  margin-right: auto;
+  padding-right: var(--space-m);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: var(--space-m);
+  list-style: none;
+}
+
+.main-header nav a {
+  width: 100%;
+}
+
+/*
+Button Styles
+*/
+
+.main-button {
+  display: inline-block;
+  padding: var(--space-s) var(--space-m);
+  text-align: center;
+  font-weight: 700;
+  color: var(--parc-text-contrast);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius);
+}
+
+.main-button:hover {
+  filter: brightness(65%);
+}
+
+.main-button-red {
+  background-color: var(--parc-red);
+}
+
+.main-button-blue {
+  background-color: var(--parc-blue);
+}
+
+.main-button-green {
+  background-color: var(--parc-green);
+}
+
+.main-button-orange {
+  background-color: var(--parc-orange);
+}
+
+/*
+Modal Styles
+*/
+
+.main-buy-tickets-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.main-buy-tickets-visible {
+  z-index: 2;
+  opacity: 1;
+}
+
+.main-buy-tickets-modal {
+  position: fixed;
+  top: 50%;
+  opacity: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: var(--space-xl);
+  border-radius: var(--radius);
+  transform: translate(-50%, -200%);
+}
+
+.main-buy-tickets-visible > .main-buy-tickets-modal {
+  opacity: 1;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.main-buy-tickets-modal h1 {
+  font-family: var(--font-headings);
+  color: var(--parc-blue);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.main-buy-tickets-modal p {
+  font-family: var(--font-headings);
+  color: var(--parc-red);
+  font-size: 24px;
+}
+
+.main-buy-tickets-modal button {
+  max-width: 200px;
+  width: 100%;
+  margin: var(--space-l) auto 0;
+}
+
+/* End of CSS by Jedrzej Lewandowski */
+/* Start of CSS by  Max Sergueev */
+/*
+Footer Styles
+*/
+
+.main-footer {
+  background-color: var(--parc-dark-blue);
+  margin-top: var(--space-xl);
+}
+
+.main-footer .main-button {
+  color: var(--parc-text-dark);
+}
+
+.main-footer-container {
+  max-width: var(--content-width);
+  text-align: center;
+  margin: auto;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.main-footer nav {
+  margin-top: var(--space-l);
+}
+
+.main-footer-social-icons {
+  width: 200px;
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-m);
+}
+
+.main-footer-slogan {
+  font-family: var(--font-headings);
+  margin: var(--space-m) 0;
+  font-size: 2rem;
+  color: var(--parc-blue);
+}
+
+.main-footer address {
+  margin: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--parc-text-bright);
+}
+
+.main-footer address a {
+  color: var(--parc-orange);
+}
+
+.main-copyright {
+  margin: var(--space-m) 0;
+  color: var(--parc-text-bright);
+}

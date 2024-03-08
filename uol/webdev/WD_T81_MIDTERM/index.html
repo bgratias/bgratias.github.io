@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Head by Jedrzej Lewandowski-->
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ParcPark Home</title>
+    <meta
+      content="Parc Park, discover the magic. Come and become a child again, or take your child and experience the best fun in the world. "
+      name="description"
+    />
+    <!--Google Fonts-->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Aleo:wght@400;700&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/home.css" rel="stylesheet" />
+    <link
+      href="images/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="images/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+  </head>
+
+  <body>
+    <!--Header by Jedrzej Lewandowski-->
+    <header class="main-header">
+      <!--Theme Switch
+      This checkbox is responsible for enabling high contrast accessible mode.
+      The accessibility was verified with the Lighthouse test.
+      JavaScript for switching the theme is at the bottom of the file.
+      We use CSS variables to modify the colors on the page.
+    -->
+      <div class="main-theme-switch-wrapper">
+        <label class="main-theme-switch" for="theme-switch-checkbox">
+          <input id="theme-switch-checkbox" type="checkbox" />
+          <em>Enable Accessibility Mode!</em>
+        </label>
+      </div>
+      <!--All the essential links for navigating the page -->
+      <a class="main-header-logo" href="index.html">
+        <img alt="ParcParc Logo" src="images/logo.svg" />
+        <div>
+          <h1>ParcPark</h1>
+          <p>Discover the magic</p>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a class="main-button main-button-blue" href="index.html"> Home </a>
+          </li>
+          <li>
+            <a class="main-button main-button-orange" href="attractions.html">
+              Attractions
+            </a>
+          </li>
+          <li>
+            <a class="main-button main-button-green" href="information.html">
+              Park Information
+            </a>
+          </li>
+        </ul>
+        <!--Following Button opens a Modal with "confirmation" of the purchase.
+         The HTML and JavaScript for opening/closing of the modal are at the bottom of the page.
+        -->
+        <button class="main-button main-button-red" onclick="toggleModal()">
+          Buy Tickets
+        </button>
+      </nav>
+    </header>
+
+    <!-- Index content by Wei-Ju Hung -->
+    <!-- Heading of this page -->
+    <main class="home-container">
+      <h2 class="home-layout home-title">ParcPark - Home</h2>
+      <!-- Banner image -->
+      <div class="home-banner-container">
+        <div class="home-banner">
+          <img
+            alt="banner picture - theme park at night"
+            class="home-img"
+            src="images/index/index-banner2.svg"
+          />
+        </div>
+      </div>
+
+      <!-- content cards section -->
+      <div class="home-layout" id="home-cards">
+        <div class="home-content-card" id="home-card1">
+          <!-- content card 1 -->
+          <img
+            alt="COVID-19 Update picture - a girl with a mask"
+            src="images/index/index-card1.svg"
+          />
+          <p>COVID-19<br />Update</p>
+        </div>
+        <div class="home-content-card" id="home-card2">
+          <!-- content card 2 -->
+          <img
+            alt="Season Pass picture - girls play water"
+            src="images/index/index-card2.svg"
+          />
+          <p>Season Pass</p>
+        </div>
+        <div class="home-content-card" id="home-card3">
+          <!-- content card 3 -->
+          <img
+            alt="Fun at Home picture - a little girl plays at home"
+            src="images/index/index-card3.svg"
+          />
+          <p>Fun at Home</p>
+        </div>
+      </div>
+
+      <!-- park information -->
+      <section class="home-layout" id="home-park-info">
+        <div>
+          <article>
+            <!-- second heading of this page -->
+            <h2>COME ENJOY THE MAGIC!</h2>
+            <!-- the content of this article -->
+            <p>
+              Time with the family is magical! ParcPark has 27 family friendly
+              rides and attractions to help you bond with your unbondables. High
+              octane thrill rides for your "too cool for amusement park" teens.
+              And safe but exciting kid's rides to keep them entertained for a
+              few precious minutes while mom and dad nurse a beer. ParcPark
+              truly has something for everyone.<br />
+              <br />
+              We are the largest amusement park for miles in every single
+              direction. And we have been here for literally years. So we have
+              worked all the kinks out. <i>No one has ever died at ParcPark.</i
+              ><br />
+              <br />
+              Of course, we are only doing this for the money, so we make it
+              very easy to spend yours. Our super popular annual pass was an
+              incredible windfall for us in 2020. That's too bad for those that
+              bought them, but face it, what are the chances of a global
+              pandemic happening again, so buy your 2021 annual pass with
+              confidence today. <br />
+              <br />
+              We have a reputation. Come visit us and see if we deserve it!<br />
+            </p>
+          </article>
+
+          <!-- opening hours -->
+          <h3>Opening hours:</h3>
+          <!-- to make opening hours as a non-ordered list, and add text decoration by using span -->
+          <ul>
+            <li><span>Monday - Thursday:</span> 11:00 AM - 9:00 PM</li>
+            <li><span>Friday - Saturday:</span> 9:00 AM - 11:30 PM</li>
+            <li><span>Sunday:</span> 11:00 AM - 9:00 PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <img
+            alt="A girl with colorful hands"
+            class="home-img"
+            src="images/index/index-about.svg"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- Footer by Max Sergueev -->
+    <!-- Starts the defined area of the footer -->
+    <footer class="main-footer">
+      <div class="main-footer-container">
+        <h2 class="main-footer-slogan">ParcPark: Discover the Magic</h2>
+        <nav>
+          <span>
+            <a class="main-button main-button-orange" href="index.html">
+              Home
+            </a>
+            <a class="main-button main-button-orange" href="attractions.html">
+              Attractions
+            </a>
+            <a class="main-button main-button-orange" href="information.html">
+              Park Information
+            </a>
+          </span>
+        </nav>
+        <address>
+          <p>123 Imagine Drive</p>
+          <p>Magic City, 123-456</p>
+          <p>Republic of United Unicorns</p>
+          <a href="mailto:parc@parcpark.com">parc@parcpark.com</a>
+        </address>
+        <img
+          alt="social media icons of facebook, twitter and instagram"
+          class="main-footer-social-icons"
+          src="images/social_media_icons.svg"
+        />
+        <p class="main-copyright">
+          © Copyright ParcPark | Developed by web-development-team81
+        </p>
+      </div>
+    </footer>
+    <!--Modal By Jedrzej Lewandowski -->
+    <!--The modal below will appear on the page only if the user clicks on the button "Buy Tickets," by default,
+    style is applied, which makes it not visible to the user.
+    However, on button click, the CSS class is added, which makes the modal visible.-->
+    <div class="main-buy-tickets-overlay" id="modal">
+      <div class="main-buy-tickets-modal">
+        <h1>Awesome!</h1>
+        <p>We can't wait to see you in our park</p>
+        <button class="main-button main-button-green" onclick="toggleModal()">
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- JavaScript for enabling some advance user interface.
+        - The "toggleModal" function is used to add/remove the CSS class to make the modal visible on the page
+          It is triggered by the button on top of the page in the header and the modal to close it.
+        - The "switchTheme" function is attached to the document's event listener to see if the checkbox on top of the page changed the value.
+          The checkbox serves as a theme switcher to allow a user to see the page in accessibility mode.
+    -->
+    <script>
+      function toggleModal() {
+        document
+          .getElementById("modal")
+          .classList.toggle("main-buy-tickets-visible");
+      }
+
+      const toggleSwitch = document.getElementById("theme-switch-checkbox");
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      }
+
+      toggleSwitch.addEventListener("change", switchTheme, false);
+    </script>
+  </body>
+</html>

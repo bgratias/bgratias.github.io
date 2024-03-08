@@ -1,0 +1,111 @@
+#button-membership{
+    color: var(--theme-text-hoverblue);
+}
+
+video{
+    max-width: 100%;
+}
+
+#image1{
+    margin: 1% 5%;
+    width: 25%;
+    height: auto;
+    float: left;
+}
+
+#image2{
+    padding: 1% 5%;
+    width: 30%;
+    height: auto;
+    float: right;
+}
+
+.wrapper{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.wrapper-left{
+    flex: 20%;
+    padding-top: var(--size-xxl);
+}
+
+.wrapper-right{
+    flex: 80%;
+}
+
+.wrapper-right li{
+    margin-left: var(--space-l);
+}
+
+#image3{
+    width: 90%;
+    height: auto;
+}
+
+#membership-banner{
+    margin: var(--space-xxl);
+    border: 1px solid var(--theme-black);
+}
+
+#membership-banner h2{
+    margin: 0;
+    text-align: center;
+    line-height: var(--space-xxl);
+}
+
+fieldset{
+    margin: var(--space-m) 0;
+    padding: var(--space-s) var(--space-m);
+}
+
+label[for="name"], 
+label[for="phone"], 
+label[for="email"] {
+    display: inline-block;
+    width: 180px;
+    text-align: right;
+}
+
+input{
+    margin: 0;
+    padding: 0;
+    size: 40;
+}
+
+/* Mobile Layout Changes */
+@media only screen and (max-width: 570px){
+
+    #membership-banner{
+        margin: var(--space-xl) var(--space-m);
+        border: 1px solid var(--theme-black);
+    }
+    
+    #membership-banner h2{
+        margin: 0;
+        text-align: center;
+        line-height: var(--space-xl);
+    }
+    
+    label[for="name"], 
+    label[for="phone"], 
+    label[for="email"] {
+        display: block;
+        width: 150px;
+        text-align: left;
+    }
+
+    input[id="name"], 
+    input[id="phone"], 
+    input[id="email"]{
+        display: block;
+        width: 100%;
+    }
+
+    button{
+        display: block;
+        margin: auto;
+    }   
+}

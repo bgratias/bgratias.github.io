@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- preconnect does handshaking in advance so downloads are faster when called later -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+
+    <!-- external links for this page -->
+    <link rel="stylesheet" href="/css/club-events.css">
+    <!-- use JavaScript includeHTML() to add html from separate file -->
+    <div w3-include-html-snip="/html/html-snips/head-snip.html"></div>
+    <!-- loading this script in the head so that the HTML it generates will be available for parsing as soon as possible -->
+    <script src="/js/includeHTML.js"></script>
+
+    <!-- page information-->    
+    <title>Shanghai Astronomy Club - Events</title>
+    <meta name="author" content="BGG">
+    <meta name="title" content="Shanghai Astronomy Club - Events">
+    <meta name="description" content="The Shanghai Astronomy Club is a group of likeminded people who love the stars.  Welcome to seasoned astronomers and curious hobiests alike.">
+    <meta name="keywords" content="Astronomy, Club, Shanghai"> <!--Set keywords for SE-->
+    
+</head>
+
+<body>
+
+    <header>
+
+        <section class="top-photo">
+            <a href="/index.html">
+                <img src="/images/header/shanghai-stars-1200x627.jpg" alt="Shanghai skyline with stars above" >
+            </a>
+            <h1>SHANGHAI<br>Astronomy<br>Club</h1>
+            <p id="coordinates"> <span>31.2304° N,</span> <span>121.4737° E</span></p>
+            <!-- #time is a placeholder. Script will insert the current time in shanghai -->
+            <p id="time"></p>
+        </section>    
+    
+        <!-- use JavaScript includeHTML() to add nav bar html from separate file -->
+        <div w3-include-html-snip="/html/html-snips/nav-snip.html"></div>
+
+    </header>
+
+    <main>
+        <h2>Club Events</h2>
+        <section>
+            <div class="month-divider">
+                <h3>September</h3>
+            </div>
+            <!-- Content for all articles is formated the same so new content can be added easily and still retain a unified style -->
+            <article>
+                <div class="event-image">
+                    <img src="/images/events/membership-drive318x244.png" alt="fall membership drive poster">
+                </div>
+                <div class="event-details">
+                    <h4 class="event-date">Sat September 18</h4>
+                    <h5 class="event-name">Membership Drive</h5>
+                    <p class="event-time">Time: 10:00am</p>
+                    <p class="event-place">Place: IAPM Mall on HuiHai Lu</p>
+                    <p class="event-description">Come and see what the Shanghai Astronomy Club is all about.  Meet some of our members, get your questions answered, and see what the club can do for you.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/events/astro-photography.jpg" alt="photographer in front of star trails">
+                </div>
+                <div class="event-details">
+                    <h4 class="event-date">Sat September 25</h4>
+                    <h5 class="event-name">Astro Photography Class</h5>
+                    <p class="event-time">Time: 9:00am</p>
+                    <p class="event-place">Place: We-Work, JingAn Office Space</p>
+                    <p class="event-description">You will learn about stargazing and photo techniques during daytime presentations, and observe and photograph the sky with guidance from the instructors at night. Topics include The World At Night, photography, stargazing, celestial phenomena, step by step guides to nightscapes, astrophotography and image processing.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/events/swap-meet.jpg" alt="men outside in front of a table of equipment">
+                </div>
+                <div class="event-details">
+                    <h4 class="event-date">Sun September 26</h4>
+                    <h5 class="event-name">Equipment Swap Meet</h5>
+                    <p class="event-time">Time: 10:00am</p>
+                    <p class="event-place">Place: Guilin Park</p>
+                    <p class="event-description">Welcome all clubs and members to share in this year's equipment swap meet. Come and find a deal on used equipment. We will provide soft drinks,water and chips for all and have a grill for burgers. The event is free to attend!</p>
+                </div>
+            </article>
+
+            <div class="month-divider">
+                <h3>October</h3>
+            </div>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/events/star-party480x319.jpg" alt="nighttime star party">
+                </div>
+                <div class="event-details">
+                    <h4 class="event-date">Sat October 2</h4>
+                    <h5 class="event-name">Night Under the Stars Party</h5>
+                    <p class="event-time">Time: 5:00pm</p>
+                    <p class="event-place">Place: SheShan Mountain Observatory</p>
+                    <p class="event-description">Sheshan is one of Shanghai's best kept secrets. In October, we will be holding our annual Night Under the Stars Star Party. Please note that no flash photos are allowed to protect everyone's night vision. Please bring a red flashlight or for a small donation, mini red flashlights will be available for purchase at the door.</p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- use JavaScript includeHTML() to add footer html from separate file -->
+        <div w3-include-html-snip="/html/html-snips/footer-snip.html"></div>
+    </footer>
+
+    <!-- use JavaScript to add html snips from exterior files -->
+    <script>includeHTML()</script>
+
+    <!-- this script updates the time in the header -->
+    <!-- it is located at the end of the body since it's content is not critical to the loading of the page -->
+    <script src="/js/updateHeaderTime.js"></script>
+
+</body>
+
+</html>

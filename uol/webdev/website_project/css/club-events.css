@@ -1,0 +1,62 @@
+/* CSS for club-events.html page */
+
+#button-club-events{
+    color: var(--theme-text-hoverblue);
+}
+
+.month-divider{
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
+    padding-left: var(--space-s);
+    background-color: var(--theme-black);
+    color: var(--theme-text-white);
+}
+
+article{
+    /* Using flexbox to arrange image with event details and make them responsive */
+    display: flex;
+    margin-bottom: var(--space-m);
+}
+
+.event-image{
+    flex: 30%;
+}
+
+.event-details{
+    flex: 65%;
+    padding-left: var(--space-s);
+}
+
+.event-image img{
+    /* image width is 100% of container*/
+    width: 100%;
+    /* image height is responsive to width */
+    height: auto;
+}
+
+.event-date{
+    line-height: 1;
+    font-weight: bolder;
+}
+
+.event-name{
+    margin-bottom: var(--space-s);
+    line-height: 1.1;
+    font-size: var(--size-l);
+    font-weight: bolder;
+}
+
+.event-time{
+    font-size: var(--size-s);
+    font-weight: bolder;
+}
+
+.event-place{
+    margin-bottom: var(--space-s);
+    font-size: var(--size-s);
+    font-weight: bolder;
+}
+
+.event-description{
+    font-size: var(--size-s);
+}

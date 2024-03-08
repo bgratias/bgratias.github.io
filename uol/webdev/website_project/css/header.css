@@ -1,0 +1,168 @@
+
+/** Header used on all pages */
+
+.top-photo{
+    /* setting position to relative allows absolute positioned child elements to be placed relative to this parent rather than relative to the viewport */
+    position: relative;
+
+    background-color: var(--theme-black);
+}
+
+.top-photo img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.top-photo h1{
+    position: absolute;
+    top: var(--space-m);
+    left: var(--space-m);
+
+    letter-spacing: .5rem;
+    line-height: 1.05;
+    font-variant: small-caps;
+    color: var(--theme-text-white);
+}
+
+#coordinates{
+    position: absolute;
+    top: var(--space-m);
+    right: var(--space-m);
+    font-family: var(--theme-font-mono);
+    font-size: var(--size-s);
+    color: var(--theme-text-white);
+}
+
+#time{
+    position: absolute;
+    top: var(--space-xl);
+    right: var(--space-m);
+    font-family: var(--theme-font-mono);
+    font-size: var(--size-s);
+    color: var(--theme-text-white);
+}    
+
+
+
+/** Nav Bar used on all pages */
+
+nav{
+    width: 100%;
+    text-align: center;
+    background: var(--theme-black);
+}
+
+nav label{
+    display: none;
+    margin-right: var(--size-m);
+    font-size: var(--size-l);
+    text-align: center;
+}
+
+#toggle{
+    display: none;
+}
+
+nav ol{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+    text-align: center;
+
+}
+
+nav li{
+    display: inline;
+}
+
+nav li a, nav li a:visited{
+    display: inline-block;
+    padding: var(--size-s) 0;
+
+    font-size: var(--size-m);
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    color: var(--theme-text-white);
+
+    transition: all 0.3s ease 0s;
+}
+
+nav li a:hover{
+    color: var(--theme-text-hoverblue);
+}
+
+
+/* Tablet Layout Changes */
+@media only screen and (min-width: 571px) and (max-width: 800px){
+
+    #time{
+        max-width: 140px;
+        text-align: right;
+        font-size: var(--size-s);
+    }
+
+    #coordinates{
+        max-width: 100px;
+        text-align: right;
+        font-size: var(--size-s);
+    }
+
+    nav li a{
+        font-size: var(--size-s);
+    }
+
+}
+
+/* Mobile Layout Changes */
+@media only screen and (max-width: 570px){
+
+    h1{
+        font-size: var(--size-xl);
+    }
+
+    #time{
+        max-width: 120px;
+        text-align: right;
+        font-size: var(--size-s);
+    }
+
+    #coordinates{
+        max-width: 100px;
+        text-align: right;
+        font-size: var(--size-s);
+    }
+
+    nav label{
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-right: var(--space-m);
+        padding-bottom: var(--space-s);
+        font-size: var(--size-l);
+        text-align: right;
+        color: var(--theme-text-white);
+        background-color: var(--theme-black);
+        cursor: pointer;
+    }
+
+    nav #menu{
+        display: none;
+        width: 100%;
+    }
+
+    nav ol{
+        display: block;
+    }    
+
+    nav li{
+        display: block;
+    }
+
+    #toggle:checked + #menu{
+        display: block;
+    }
+
+}

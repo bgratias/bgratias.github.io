@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Page specifications-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Web crawling robot instructions-->
+    <meta name="robots" content="index"> <!--Request robots to index this page-->
+
+    <!--Open Graph Page Information for Facebook, Twitter, Slack, etc.-->
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Shanghai Astronomy Club">
+    <meta property="og:image" content="https://www.shac.com/images/shanghai-stars-1200x627.jpg"> 
+    <meta property="og:url" content="http://www.shac.com">
+    <meta property="og:description" content="The Shanghai Astronomy Club is a group of likeminded people who love the stars.  Welcome to seasoned astronomers and curious hobiests alike.">
+
+    <!--External Resources-->
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/fav-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/fav-icons/favicon-16x16.png">
+    <link rel="manifest" href="/images/fav-icons/site.webmanifest">
+
+    <!-- page information-->    
+    <title>WD Project Report</title>
+    <meta name="author" content="BGG">
+    <meta name="title" content="Web Development Coursework Report">
+    <meta name="Report to explain what I have learned in the process of building my site, where I found my information and how I have adapted any resources." content="">
+    <meta name="keywords" content="WD, WebDev, CM1040, Report"> <!--Set keywords for SE-->
+
+    <!-- external files -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/report.css">
+    <script src="/js/includeHTML.js"></script>
+    
+</head>
+
+
+<body>
+
+    <nav>
+        <!-- Burger menu concept from the South London Reading Club Example -->
+
+        <!-- &#9776 is the hamburger menu icon -->
+        <label for="toggle">&#9776;</label>
+        <!-- toggle is used to open the hamburger menu on small mobile devices -->
+        <input id="toggle" type="checkbox"/>
+
+        <div id="menu">
+            <ol>
+                <li><a id="button-home" href="index.html">Home</a></li>
+                <li><a id="button-club-events" href="html/club-events.html">Club Events</a></li>
+                <li><a id="button-sky-events" href="html/sky-events.html">Sky Events</a></li>
+                <li><a id="button-sky-chart" href="html/sky-chart.html">Sky Chart</a></li>
+                <li><a id="button-membership" href="html/membership.html">Membership</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Coursework 2<br>Web Site Submission</h1>
+        <section>
+            <h2>Coursework Report</h2>
+            
+            <h3>Introduction:</h3>
+            <p>As a child in Canada I was intrigued by the stars and astronomy, but it was a solitary pleasure.  It was not until much later in life that I joined an astronomy club and discovered the joy that comes from being with other people who share the same passion. I now live in Shanghai, one of the largest cities on the planet. This website envisions a group of people who overcome tall buildings and light pollution in pursuit of this noble celestial hobby.</p>
+            <p>I chose a very simple, open and welcoming structure for my site design. Cartoon graphics, clean fonts, large white spaces and direct jargon-free language are intended to make the club approchable to new and potential members. At the same time, the site endeavors to provide uncluttered access to information that serious club members need at their fingertips such as geographical coordinates, moon phases, and sun rise/set times.</p>
+
+            <h3>Inspiration:</h3> 
+            <p>The members of my astronomy club back in Canada came from all walks of life, all ages, all levels of education and all income brackets. Their hobby brought them together and disolved diferences in a way that I found amazing and truly inspiring. This observation influenced how I determined the target audience of this website.</p>
+            <p>I find astronomers in general foster a worldwide culture of generosity and sharing. The vast majority of astronomical tools and information on the internet is produced by amature astronomers. I am inspired by this sharing of time and information and the Shanghai Astronomy Club website endeavors to reflect that.</p>
+            <p>Above all I am inspired by our creator. I truly believe the beauty and wonder of our universe is his gift to mankind and that part of his purpose is for us to find joy and accomplishment in discovering its treasures.</p>
+            
+            <h3>Accessibility:</h3>
+            <p><em>Three ways in which accessabily has been considered.</em></p>
+            <ul>
+                <li><b>(Perceivable) Image alt atribute:</b>  All images have alt text defined allowing screen readers to access a description of the image. Images that are for decoration contain a null value for alt text to notify screen readers that these images can be safely ignored.</li>
+                <li><b>(Operable) Tab order:</b>  All interactive elements on the page are logically ordered top down and left to right. This allows intuitive keyboard-only accessabily to all interactive elements.</li>
+                <li><b>(Understandable) Heading hierarchy:</b>  This site strictly adheres to the hierarchy of heading tags. This order is important to the use of screen readers, search engines, etc. to give logical semantic structure to the page irrespective of styling.</li>
+            </ul>
+
+            <h3>Usability:</h3>
+            <p><em>Three ways in which usability has been considered.</em></p>
+            <ul>
+                <li><b>Consistant Design:</b>  All pages are designed with exactly the same header, navigation bar and footer. This gives the user a consistant point of reference regardless of where he is on the site. </li>
+                <li><b>Standard Design Conventions:</b> The site is designed to conform with conventional website designs (ie. Logo and nav bar at top, underlined hyperlinks, contact information in footer, etc.). This give the user an intuitive sense of how to accomplish the tasks he wishes to perform based on his cumulative experience visiting other websites.</li>
+                <li><b>Link states:</b>  Hover states and pointer changes are used consistantly on all user interactive elements. This serves as a visible indication to the user that the element can be interacted with without having to provide specific instructions. Visited links also change colour giving the user a visual indication of where he has already been.</li>
+            </ul>
+
+            <h3>Learning:</h3>
+            <p>I have virtually no experience with HTML, CSS and only very little experience with JavaScript programming. So virtually every aspect of creating this website was a learning opportunity. While coding this site I made extensive use of the video lectures and my personal notes from this course. I found following the same steps used when creating our midterm group project emmensely helpful. By first creating a wireframe followed by HTML then CSS and finally JavaScript I found I was able to break the project into small tasks and work thru them one at a time.</p>
+            <p>While coding the HTML I made extensive use of <cite>W3Schools.com</cite> HTML reference pages. I quickly learned the purpose of the various tags, but it took time to learn the various attributes and syntax for each tag.</p>
+            <p>Coding the CSS was more challenging. Here I again used <cite>W3Schools.com</cite> but I found the step by step CSS Tutorials more helpful than the Reference section. The code examples were rarely useful for my application but I was able to follow the methodology and apply the techniques to my own site. I found positional formating the most difficult. I needed to learn relative vs absolute positioning, flexbox, and grid layout more thoroughly.</p>
+            <p>Coding JavaScript that interacted with the DOM was definitly the most challenging part of the project for me. My initial design called for more coding than I was capable of. I found most online tutorials and code examples started above my level and assumed I knew more than I did about JavaScript syntax and manipulating the DOM. I found that a better approach was to simplify my design and focus on creating my own JavaScript from scratch using the knowledge I had gained in <cite>ITP1</cite>. I used MDN Web Docs at <cite>mozilla.org</cite> as a reference to implement the JavaScript commands I needed.</p>
+
+            <h3>Evaluation I:</h3>
+            <p><em>What aspect(s) worked well and why?</em></p>
+            <p>I am pleased with the overall design of the site. I think the footer is particularly attractive and responds well to diferent device widths. I am impressed with how small styling changes like 0.3 second transitions applied to the hover state really make the website feel polished and professional.</p>
+            <p>I feel the JavaScript interactions that provide the information for the Sky Events information worked very well. I was very happy to find <cite>Astronomy Library for JavaScript</cite> by Don Cross which provided the astronomical formulas which allowed me to calculate the sun and moon rise times and moon phases locally rather than pulling the information from an external server. I feel the changing moon phase image is also well implemented.</p>
+            <p>My favorite is the Sky Chart page. The page is dominated by a beautiful all-sky representation customized for an observer in Shanghai at that exact moment and changes slowly as objects move across the sky. I was very pleased to find <cite>VirtualSky</cite> provided freely for educational and non-profit use by Las Cumbres Observatory.</p>
+            
+            <h3>Evaluation II:</h3>
+            <p><em>What aspect(s) could be improved, and how?</em></p>
+            <p>My initial concept called for club events and sky events to be manipulated with sorting and filters and then pushed to the DOM using JavaScript. I understand the general concept, but I was unable implement this functionality. Idealy I would like the source data to be in a separate data file which would allow a client to easily make additions and changes without having to deal with HTML or JavaScript coding, perhaps in a CSV file that could be edited by the end user in <cite>Excel</cite>.</p>
+            <p>I planned to implement a "night mode" commonly used by astronomers while observing to protect their night vision.  Implementation would require removing all blue and white light sources from the website. Making changes to text is easy, however the challenge of manipulating colours on dozens of icons and photos caused me to abandon this idea. A way this could be implemented would be to create an entire second set of images meets the red light requirements. A better way would be to use some sort of transfom to manipulate images on the fly.</p>
+            <p>I thought it would be a good idea to use JavaScript to copy frequently repeated HTML snippets (ie. header, footer, nav bar) into the HTML rather than repeating the same HTML over and over agian on each page. My implementation worked fairly well, but it also introduced a few unexpected problems that I spent many hours trying to troubleshoot. It seems that HTML code inserted using <code>innerHTML</code> can not be selected by JavaScript for other DOM manipulations. According to some conversations I read on <cite>stackoverflow.com</cite> the <code>replaceChild()</code> method may have been more appropriate for this application.</p>
+            <p>While I attempted to create a responsive design that would respond well to device viewport sizes, I did not create scaled images and video that would be more considerate of a user's mobile bandwidth. I feel this is an important aspect of responsive design that should not be ignored.  Given more time I would certainly attempt to implement this functionality.</p>
+            <p>I really dislike when a page jumps around as it loads content. I would like to study ways to deal with this problem in the future.</p>
+        </section>
+
+        <section id="resources">
+            <h2>Resources:</h2>
+
+            <h3>Information Resources</h3>
+            <!-- Format -->
+                <!-- <li>Author Initial, Author Surname, <cite>'Title'</cite>, YearPublished. [Online]. Available:<a href="">Web URL</a>. [Accessed: 10-Oct-2013].</li> -->
+
+            <!-- Example -->
+                <!-- <li>Handlebarsjs.com, <cite>'Handlebars Reference'</cite>, 2016. [Online]. Available:<a href="http://handlebarsjs.com/reference.html">http://handlebarsjs.com/reference.html</a>. [Accessed: 20-Sep-2016].</li> -->
+
+            <ol>
+                <li>W3Schools.com, <cite>'HTML Tag Reference'</cite>, 2021. [Online]. Available:<a href="https://www.w3schools.com/tags/default.asp" target="_blank">https://www.w3schools.com/tags/default.asp</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>W3Schools.com, <cite>'CSS Reference'</cite>, 2021. [Online]. Available:<a href="https://www.w3schools.com/cssref/default.asp" target="_blank">https://www.w3schools.com/cssref/default.asp</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>W3Schools.com, <cite>'CSS Selector Reference'</cite>, 2021. [Online]. Available:<a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">https://www.w3schools.com/cssref/css_selectors.asp</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>W3Schools.com Tutorials, <cite>'Learn HTML'</cite>, 2021. [Online]. Available:<a href="https://www.w3schools.com/html/default.asp" target="_blank">https://www.w3schools.com/html/default.asp</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>W3Schools.com Tutorials, <cite>'Learn CSS'</cite>, 2021. [Online]. Available:<a href="https://www.w3schools.com/css/default.asp" target="_blank">https://www.w3schools.com/css/default.asp</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>MDN Web Docs - Mozilla, <cite>'Web technology for developers'</cite>, 2021. [Online]. Available:<a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">https://developer.mozilla.org/en-US/docs/Web</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>Stack Overflow, <cite>'Questions'</cite>, 2021. [Online]. Available:<a href="https://stackoverflow.com/questions" target="_blank">https://stackoverflow.com/questions</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>CSS-Tricks.com, <cite>'A Complete Guide to Flexbox'</cite>, 2021. [Online]. Available:<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>. [Accessed: 13-Sep-2021].</li>
+
+                <li>CSS-Tricks.com, <cite>'A Complete Guide to Grid'</cite>, 2021. [Online]. Available:<a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">https://css-tricks.com/snippets/css/complete-guide-grid/</a>. [Accessed: 13-Sep-2021].</li>
+            </ol>
+
+            <h3>Code Resources</h3>
+
+            <!-- Format -->
+                <!-- <li>Author Initial, Author Surname, <cite>'Title of program/source code'</cite> (commit), Year Published. [Type]. <a href="" target="_blank">Web address or publisher.</a></li> -->
+
+            <!-- Example -->
+                <!-- <li>P. Korponai, <cite>'Meteor Kitchen examples'</cite> (commit 0abcf1c), 2016. [Source code]. <a href="https://github.com/perak/kitchen-examples/tree/master/example-minimal" target="_blank">https://github.com/perak/kitchen-examples/tree/master/example-minimal</a></li> -->
+
+            <ol>
+                <li>D. Cross (cosinekitty@gmail.com), <cite>'Astronomy Engine'</cite> (commit 57177a5), 2021. [JS Library]. <a href="https://github.com/cosinekitty/astronomy.git" target="_blank">https://github.com/cosinekitty/astronomy.git</a></li>
+
+                <li>WeatherWidget.io, <cite>'weather widget'</cite>, 2021. [Embedded code]. <a href="https://weatherwidget.io" target="_blank">https://weatherwidget.io</a></li>
+
+                <li>Las Cumbres Observatory, <cite>'VirtualSky'</cite>, 2021. [Embedded code]. <a href="https://virtualsky.lco.global" target="_blank">https://virtualsky.lco.global</a></li>
+
+                <li>W3Schools.com Tutorials, <cite>'How TO - Include HTML'</cite>, 2021. [Source code]. <a href="https://www.w3schools.com/howto/howto_html_include.asp" target="_blank">https://www.w3schools.com/howto/howto_html_include.asp</a></li>
+
+                <li>Cory Hu, <cite>'Urbanist'</cite>, 2020. [variable font]. <a href="https://github.com/coreyhu/Urbanist" target="_blank">https://github.com/coreyhu/Urbanist</a></li>
+
+                <li>Ralph Levien, <cite>'Inconsolata'</cite>, 2020. [variable font]. <a href="https://github.com/googlefonts/inconsolata" target="_blank">https://github.com/googlefonts/inconsolata</a></li>
+            </ol>
+
+            <h3>Media Resources</h3>
+            <ol>
+                <li>leftaway (@flickr.com), <cite>'Shanghai Stars'</cite>, 2018. [photo]. <a href="https://www.flickr.com/photos/76054016@N08/44051805410/in/photolist-2a7H21o-8XzoJq-93WDNE-6Aa9WU-2kwzNND-2gBccgY-JoNYHZ-91Ka5g-2jsU9Tg-xAm7MU-2jHdPPk-Q2z9tm-NYinbu-dZ7Vbc-GvPNMh-wxezR-QWYSCp-7x6mEm-e9Hdah-NF6uZ1-zgVWaK-Pgb39q-qnFuPt-P4E31p-Ufq1ub-NXsUpS-P8KzCT-TRL9Pj-uu4KwH-223rtV-fQvd1H-5mAoQH-8Xxx8f-SnSbUa-2i3CBts-PZ2AVJ-RohifP-Sb8TLq-23fTwNb-RPN4MB-FRPwwV-XehwrL-39BgXa-PmFqWR-23urLiX-EBtj5Z-2jJ2Fv4-2kcTSXL-2hcSBd3-2kEoq72" target="_blank">https://www.flickr.com/photos/</a></li>
+
+                <li>Blue Chalk (@vimeo.com), <cite>'A Midsummer's Star Party (TV Promo)'</cite>, 2014. [video]. <a href="https://vimeo.com/101030193" target="_blank">https://vimeo.com/101030193</a></li>
+
+                <li>P. Thanga Vignesh (@the Noun Project), <cite>'moonrise and moonset'</cite>. [Icons]. <a href="https://thenounproject.com/amoghdesign/collection/weather/?i=217512" target="_blank">https://thenounproject.com/amoghdesign/collection/weather/</a></li>
+
+                <li>Qpdzjjbi (@subpng.com), <cite>'sunrise and sunset'</cite>. [Icons]. 
+                    <a href="https://www.subpng.com/png-p27nuf/" target="_blank">https://www.subpng.com/png-p27nuf/</a>
+                    <a href="https://www.subpng.com/png-v1tsup/" target="_blank">https://www.subpng.com/png-v1tsup/</a>
+                </li>
+
+                <li>2020 Twitter, Inc. (Twemoji), <cite>'Ringed Planet'</cite>. [Favicon]. <a href="https://twemoji.twitter.com/" target="_blank">https://twemoji.twitter.com/</a></li>
+
+                <li>Freepik (@flaticon.com), <cite>'Icon Pack: Animals and Nature'</cite>. [Moon Phase Icons]. <a href="https://www.flaticon.com/packs/animals-and-nature" target="_blank">https://www.flaticon.com/packs/animals-and-nature</a></li>
+
+                <li>Freepik (@flaticon.com), <cite>'Icon Pack: Social Network Logo Collection'</cite>. [Icons]. <a href="https://www.flaticon.com/packs/social-network-logo-collection" target="_blank">https://www.flaticon.com/packs/social-network-logo-collection</a></li>
+
+                <li>DinosoftLabs (@flaticon.com),<cite> 'Icon Pack: Space'</cite>. [Icons]. <a href="https://www.flaticon.com/packs/space-253" target="_blank">https://www.flaticon.com/packs/space-253</a></li>
+
+                <li>monkik (@flaticon.com),<cite> 'Icon Pack: Space'</cite>. [Icons]. <a href="https://www.flaticon.com/packs/space-85" target="_blank">https://www.flaticon.com/packs/space-85</a></li>
+
+                <li>Icongeek26 (@flaticon.com),<cite> 'Icon Pack: Alaska'</cite>. [Icons]. <a href="https://www.flaticon.com/packs/alaska-38" target="_blank">https://www.flaticon.com/packs/alaska-38</a></li>
+            </ol>
+
+            <h3>Tools</h3>
+            <ol>
+                <li>Microsoft, <cite>'Visual Studio Code'</cite>. [Code Editor]. <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></li>
+
+                <li>GitHub Inc., <cite>'Github'</cite>. [Software Developer]. <a href="https://www.github.com/" target="_blank">https://www.github.com/</a></li>
+
+                <li>Apple Inc., <cite>'Safari'</cite>. [Web Browser]. <a href="https://www.apple.com/safari/" target="_blank">https://www.apple.com/safari/</a></li>
+
+                <li>Google LLC, <cite>'Google Chrome'</cite>. [Web Browser]. <a href="https://www.google.com/chrome/" target="_blank">https://www.google.com/chrome/</a></li>
+
+                <li>Ginger Labs, <cite>'Notability'</cite>. [Notetaking iPad APP]. <a href="https://www.gingerlabs.com/" target="_blank">https://www.gingerlabs.com/</a></li>
+                
+                <li>Good.iWare Ltd., <cite>'GoodReader'</cite>. [PDF Reader iPad APP]. <a href="https://www.goodreader.com/" target="_blank">https://www.goodreader.com/</a></li>
+
+                <li>Apple Inc., <cite>'Keynote'</cite>. [Presentation Software]. <a href="https://www.apple.com/keynote/" target="_blank">https://www.apple.com/keynote/</a></li>
+            </ol>
+        </section>
+
+        <section>    
+            <h2>Appendices:</h2>
+            
+            <h3>Site Map</h3>
+            <div id="sitemap">
+                <a href="report/sitemap.jpg">
+                    <img src="report/sitemap.jpg" alt="site map">
+                </a>
+            </div>
+
+            <h3>Wireframes</h3>
+            <div id="wireframe">
+                <a href="report/wireframe.jpg">
+                    <img src="report/wireframe.jpg" alt="SHAC wireframe diagram">
+                </a>
+                <a href="report/wireframe2.jpg">
+                    <img src="report/wireframe2.jpg" alt="SHAC wireframe diagram">
+                </a>
+            </div>
+
+            <h3>Mockups</h3>
+            <h4>Desktop</h4>
+            <div id="mockup-wide">
+                <a href="report/mockups/Mockup01-Home.png">
+                    <img src="report/mockups/Mockup01-Home.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/Mockup02-ClubEvents.png">
+                    <img src="report/mockups/Mockup02-ClubEvents.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/Mockup03-SkyEvents.png">
+                    <img src="report/mockups/Mockup03-SkyEvents.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/Mockup04-SkyChart.png">
+                    <img src="report/mockups/Mockup04-SkyChart.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/Mockup05-Membership.png">
+                    <img src="report/mockups/Mockup05-Membership.png" alt="SHAC website mockup">
+                </a>
+            </div>
+            <h4>Mobile</h4>
+            <div id="mockup-mobile">
+                <a href="report/mockups/MockupMobile01-Home.png">
+                    <img src="report/mockups/MockupMobile01-Home.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/MockupMobile02-ClubEvents.png">
+                    <img src="report/mockups/MockupMobile02-ClubEvents.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/MockupMobile03-SkyEvents.png">
+                    <img src="report/mockups/MockupMobile03-SkyEvents.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/MockupMobile04-SkyChart.png">
+                    <img src="report/mockups/MockupMobile04-SkyChart.png" alt="SHAC website mockup">
+                </a>
+                <a href="report/mockups/MockupMobile05-Membership.png">
+                    <img src="report/mockups/MockupMobile05-Membership.png" alt="SHAC website mockup">
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

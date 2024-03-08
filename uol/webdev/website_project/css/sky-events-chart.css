@@ -1,0 +1,240 @@
+/* CSS for sky-events.html and sky-chart.html pages */
+
+#skyconditions{
+    width: 100%;
+    margin: auto;
+    
+    display: grid;
+  
+    grid-template-columns: 
+      minmax(100px, 33%) 
+      minmax(100px, 33%) 
+      minmax(100px, 33%);
+    grid-template-rows: auto;
+    grid-template-areas:
+    'currentdate rise-set moon-phase'
+    'shanghai-time rise-set moon-phase'
+    'UTC-time rise-set moon-phase'
+    'weather weather weather'
+    'planets planets planets';
+  
+    justify-items: stretch;
+    justify-content: center;
+}
+
+#skyconditions h3{
+    margin: 0;
+    font-size: var(--size-m);
+    text-align: center;
+    font-weight: bolder;
+}
+
+#skyconditions p{
+    margin-bottom: var(--space-s);
+    font-family: var(--theme-font-mono);
+    font-size: var(--size-s);
+    text-align: center;
+}
+
+#shanghai-date{
+    grid-area: currentdate;
+}
+
+#shanghai-time{
+    grid-area: shanghai-time;
+}
+
+#UTC-time{
+    grid-area: UTC-time;
+}
+
+#rise-set{
+    grid-area: rise-set;
+}
+
+.rise-set{
+    display: flex;
+}
+
+.rise-set img{
+    display: block;
+    margin: auto;
+    max-width:32px;
+    height:auto;
+}
+
+.rise-set .rise{
+    flex: 50%;
+    text-align: center;
+}
+
+.rise-set .set{
+    flex: 50%;
+    text-align: center;
+}
+
+#moon-phase{
+    grid-area: moon-phase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#moon-phase img{
+    display: block;
+    margin: auto;
+    width: 128px;
+    height: auto;
+}
+
+
+/* CSS for sky-events.html */
+
+#weather{
+    grid-area: weather;
+    width: 100%;
+    margin: auto;
+    margin-top: var(--space-m);
+}
+
+#events-chart{
+    max-width: 800px;
+    margin: auto;
+    margin-top: var(--space-xl);
+}
+
+.month-divider{
+    margin-top: var(--space-l);
+    padding-left: var(--space-s);
+    background-color: var(--theme-black);
+    color: var(--theme-text-white);
+}
+
+article{
+    display: flex;
+    margin-bottom: var(--space-m);
+}
+
+.event-image{
+    margin-top: var(--size-m);
+    flex: 5%;
+}
+
+.event-details{
+    flex: 95%;
+    padding-left: var(--space-s);
+}
+
+.event-image img{
+    display: block;
+    margin: auto;
+    max-width: 32px;
+    height: auto;
+}
+
+article h4{
+    line-height: 1;
+}
+
+.event-date{
+    line-height: 1;
+    font-weight: bolder;
+}
+
+.event-time{
+    margin-left: var(--size-m);
+    font-size: var(--size-s);
+    line-height: 1;
+    font-weight: bolder;
+}
+
+.event-name{
+    margin-bottom: var(--space-s);
+    line-height: 1.1;
+    font-size: var(--size-l);
+    font-weight: bolder;
+}
+
+.event-description{
+    font-size: var(--size-s);
+}
+
+
+/* CSS for sky-chart.html */
+
+#star-chart{
+    width: 100%;
+    margin: auto;
+    margin-top: var(--space-l);
+}
+
+.iframe-container{
+    /* this container allows us to define the height of the iframe proportional to the width */
+    position: relative;
+    padding-bottom: 100%;
+    height: 0px;
+}
+
+.iframe-container iframe{
+    /* scales iframe to fill container */
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    height: 100%;
+    width: 100%;
+}
+
+/* loading element will show until the iframe is retrieved and is rendered overtop of it */
+.loading{
+    position: absolute;
+    /* center top corner in the parent */
+    left: 50%;
+    top: 50%;
+    
+    /* adjust the position of the top corner relative to the size of the content in order to center it */
+    transform: translate(-50%, -50%);
+    
+    /* layer element behind all other content */
+    z-index: -1;
+}
+
+.loading img{
+    display: block;
+    
+    /* spins the loading image */
+    animation-name: spin;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes spin{
+    100% {transform: rotate(30deg);}
+}
+
+
+
+/* sky-events.html and sky-chart.html */
+/* Mobile Layout Changes */
+@media only screen and (max-width: 570px){
+
+    #skyconditions{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        'currentdate currentdate'
+        'shanghai-time UTC-time'
+        'rise-set moon-phase'
+        'weather weather'
+        'planets planets';
+        row-gap: var(--space-m);
+    }
+
+    #moon-phase img{
+        width: 96px;
+        height: auto;
+    }
+}

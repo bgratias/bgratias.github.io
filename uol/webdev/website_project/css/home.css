@@ -1,0 +1,48 @@
+#button-home{
+    color: var(--theme-text-hoverblue);
+}
+
+.quotation{
+    display:inline-block;
+    margin: auto;
+}
+
+blockquote{
+    width: 50%;
+    margin: auto;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+cite{
+    width: 50%;
+    display:block;
+    margin: auto;
+    text-align: right;
+    font-weight: bold;
+}
+
+#image1{
+    margin: 1% 5%;
+    width: 25%;
+    height: auto;
+    float: right;
+}
+
+#image2{
+    padding: 1% 5%;
+    width: 40%;
+    height: auto;
+    float: left;
+
+    animation-name: spin;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes spin {
+    100% {transform: rotate(360deg);}
+}

@@ -1,0 +1,173 @@
+/* These styling elements will be applied universally to the site */
+
+
+/* Definition of Global variables for unified feel on all pages */
+:root {
+
+    /* Theme colours */
+    --theme-black: rgb(37, 37, 42);
+    --theme-background: rgb(240, 248, 255);
+
+    /* Theme text colours */
+    --theme-text-main: #25252a;
+    --theme-text-blue: #093a61;
+    --theme-text-white: #edf0f1;
+    --theme-text-hoverblue: #0190b0;
+    --theme-text-visitedpurple: purple;
+
+    /* Theme fonts */
+    /* Google Fonts: Urbanist by Corey Hu */
+    --theme-font-headings: 'Urbanist', sans-serif;
+    --theme-font-text: 'Urbanist', sans-serif;
+    /* Google Fonts: Inconsolata by Ralph Levien */
+    --theme-font-mono: 'Inconsolata', monospace;
+
+    /* Text sizing */
+    --size-xs:0.8rem;
+    --size-s: 1.0rem;
+    --size-m: 1.5rem;
+    --size-l: 2.0rem;
+    --size-xl: 3.0rem;
+    --size-xxl: 4.0rem;
+
+    /* Theme sizing */
+    --space-s: .5rem;
+    --space-m: 1rem;
+    --space-l: calc(2 * var(--size-m));
+    --space-xl: calc(2 * var(--size-l));
+    --space-xxl: calc(2 * var(--size-xl));
+}
+  
+html {
+    /* define base font size.  All size and spacing definitions are relative to this size. */
+    font-size: 16px;
+
+    /* change default CSS behaviour to force defined element width/height to include border and padding. Content box will adjust to absorb the diference. */
+    box-sizing: border-box;
+
+    /* Even if the screen is wider, content will not exceed max-width */
+    max-width: 1024px;
+    
+    /* Auto margin will automatically center the content in the given screen */
+    margin: auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    height: 100%;
+    font-family: var(--theme-font-text);
+    font-size: var(--size-m);
+    color: var(--theme-text-main);
+
+    background-color: var(--theme-background);
+}
+
+main{
+    margin: var(--space-m);
+    line-height: 1.5;
+}
+
+h1{
+    font-size: var(--size-xxl);
+}
+
+h2{
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-l);
+    font-family: var(--theme-font-headings);
+    font-size: var(--size-xl);
+}
+
+h3{
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-m);
+    font-family: var(--theme-font-headings);
+    font-size: var(--size-l);
+    font-weight: bolder;
+}
+
+p{
+    font-size: var(--size-m);
+    margin-bottom: var(--size-s);
+}
+
+ul{
+    font-size: var(--size-m);
+    font-weight: bold;
+}
+
+li{
+    font-size: var(--size-m);
+    font-weight:normal;
+}
+
+a{
+    color: var(--theme-text-blue);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+a:visited{
+    color: var(--theme-text-visitedpurple);
+}
+
+a:hover{
+    color: var(--theme-text-hoverblue);
+}    
+
+legend{
+    padding: var(--space-s);
+    font-size: var(--size-m);
+}
+
+input{
+    margin: var(--space-s);
+    font-size: var(--size-m);
+    background-color: var(--theme-text-white);
+}
+
+textarea{
+    width: 100%;
+    padding: var(--space-s);
+    font-size: var(--size-m);
+    background-color: var(--theme-text-white);
+}
+
+button{
+    padding: var(--size-m);
+    font-size: var(--size-m);
+    color: var(--theme-text-white);
+    background-color: var(--theme-text-blue);
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: var(--theme-text-hoverblue);
+}
+
+
+
+/* Mobile Layout Changes */
+@media only screen and (max-width: 570px){
+
+    html{
+        font-size: 12px;
+    }
+
+    main{
+        margin: var(--space-s);
+    }
+
+    h2{
+        margin-top: var(--space-l);
+        margin-bottom: var(--space-m);
+        text-align: center;
+    }
+    
+}

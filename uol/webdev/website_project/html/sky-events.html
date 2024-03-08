@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- preconnect does handshaking in advance so downloads are faster when called later -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+
+    <!-- external links for this page -->
+    <link rel="stylesheet" href="/css/sky-events-chart.css">
+    <!-- use JavaScript includeHTML() to add html from separate file -->
+    <div w3-include-html-snip="/html/html-snips/head-snip.html"></div>
+    <!-- loading this script in the head so that the HTML it generates will be available for parsing as soon as possible -->
+    <script src="/js/includeHTML.js"></script>
+
+    <!-- page information-->    
+    <title>Shanghai Astronomy Club - Sky Events</title>
+    <meta name="author" content="BGG">
+    <meta name="title" content="Shanghai Astronomy Club - Sky Events">
+    <meta name="description" content="The Shanghai Astronomy Club is a group of likeminded people who love the stars.  Welcome to seasoned astronomers and curious hobiests alike.">
+    <meta name="keywords" content="Astronomy, Club, Shanghai"> <!--Set keywords for SE-->
+        
+</head>
+
+<body>
+
+    <header>
+
+        <section class="top-photo">
+            <a href="/index.html">
+                <img src="/images/header/shanghai-stars-1200x627.jpg" alt="Shanghai skyline with stars above" >
+            </a>
+            <h1>SHANGHAI<br>Astronomy<br>Club</h1>
+            <p id="coordinates"> <span>31.2304° N,</span> <span>121.4737° E</span></p>
+            <!-- #time is a placeholder. Script will insert the current time in shanghai -->
+            <p id="time"></p>
+        </section>    
+    
+        <!-- use JavaScript includeHTML() to add nav bar html from separate file -->
+        <div w3-include-html-snip="/html/html-snips/nav-snip.html"></div>
+
+        <!-- since sky-chart and sky-events share the same css file this button styling needs to be done inline -->
+        <style>#button-sky-events{color: var(--theme-text-hoverblue);}</style> 
+
+    </header>
+
+    <main>
+        <h2>Shanghai Sky Events</h2>
+
+        <section id="skyconditions">
+
+            <div id="shanghai-date">
+                <h3>Shanghai Date: </h3>
+                <!-- "--Loading--" is a placeholder. Script will calculate and replace this content -->
+                <p>--Loading--</p>
+            </div>
+            <div id="shanghai-time">
+                <h3>Shanghai Time:</h3>
+                <p>--Loading--</p>
+            </div>
+            <div id="UTC-time">
+                <h3>UTC Time: </h3>
+                <p>--Loading--</p>
+            </div>
+
+            <div id="rise-set">
+                <h3>Sun</h3>
+                <div id="sun" class="rise-set">
+                    <div class="rise">
+                        <!-- there is no alt"" text for these icons since they are decorative and do not impart any information -->
+                        <!-- setting a width and height prevents the page from jumping around as it loads -->
+                        <img src="/images/sky-events-chart/rise-set/sun-rise.png" alt="" width="32" height="32">
+                        <p>--Loading--</p>
+                    </div>
+
+                    <div class="set">
+                        <img src="/images/sky-events-chart/rise-set/sun-set.png" alt="" width="32" height="32">    
+                        <p>--Loading--</p>
+                    </div>
+                </div>
+
+                <h3>Moon</h3>
+                <div id="moon" class="rise-set">
+                    <div class="rise">
+                        <img src="/images/sky-events-chart/rise-set/moon-rise.png" alt="" width="32" height="32">
+                        <p>--Loading--</p>
+                    </div>
+
+                    <div class="set">
+                        <img src="/images/sky-events-chart/rise-set/moon-set.png" alt="" width="32" height="32">    
+                        <p>--Loading--</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="moon-phase">
+                <h3>Moon Phase:</h3>
+                <!-- Using javascript this image will be replaced with an image showing the current moon phase -->
+                <img src="/images/sky-events-chart/moonphases/001-moon.svg" alt="current moon phase">
+            </div>
+
+            <!-- Weather widget from weatherwidget.io -->
+            <!-- I have configured this widget for the weather in Shanghai starting from today's date -->
+            <!-- Additional customizations were made to match the colour and styling of the website -->
+            <!-- This widget is responsive -->
+            <div id="weather">
+                <a class="weatherwidget-io" 
+                    href="https://forecast7.com/en/31d23121d47/shanghai/" 
+                    data-font="Roboto" 
+                    data-icons="Climacons Animated" 
+                    data-days="5" 
+                    data-theme="dark" 
+                    data-basecolor="#25252a" 
+                    data-accent="" 
+                    data-textcolor="#edf0f1" 
+                    data-highcolor="#edf0f1" 
+                    data-lowcolor="#0190b0" 
+                    data-mooncolor="#edf0f1" 
+                    data-cloudcolor="#0190b0" 
+                    data-snowcolor="#edf0f1" >
+                    Shanghai, China</a>
+                <script>
+                !function(d, s, id){
+                    var js,fjs=d.getElementsByTagName(s)[0];
+                    if(!d.getElementById(id)){
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src='https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }
+                }(document,'script','weatherwidget-io-js');
+                </script>
+            </div>
+        </section>
+
+
+        <section id="events-chart">
+            <div class="month-divider">
+                <h3>September</h3>
+            </div>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/newmoon.png" alt="New Moon">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">September 7</span>
+                        <span class="event-time">00:52 UTC</span>
+                    </h4>
+                    <h5 class="event-name">New Moon</h5>
+                    <p class="event-description">Occurs approximately every 27 days. The Moon will be located on the same side of the Earth as the Sun and will not be visible in the night sky. This is the best time to observe faint objects such as galaxies and star clusters because there is no moonlight to interfere.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/neptune.png" alt="Planet Neptune">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">September 14</span>
+                        <span class="event-time"></span>
+                    </h4>
+                    <h5 class="event-name">Neptune at Opposition</h5>
+                    <p class="event-description">The blue giant planet although still at the edges of our solar system, will be at its closest approach to Earth.  It will be fully illuminated by the Sun, brighter than at any other time of the year and visible all night long. This will be the best time to photograph Neptune although, due to the extreme distances involved, in all but the most powerful telescopes, it will only appear as a tiny blue dot.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/mercury.png" alt="Planet Mercury">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">September 15</span>
+                        <span class="event-time"></span>
+                    </h4>
+                    <h5 class="event-name">Mercury at Greatest Eastern Elongation</h5>
+                    <p class="event-description">The planet Mercury reaches greatest eastern elongation of 26.8 degrees from the Sun. This is the best time to view Mercury since it will be at its highest point above the horizon in the evening sky. Look for the planet low in the western sky just after sunset.</p>
+                </div>
+                </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/fullmoon.png" alt="Full Moon with craters">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">September 20</span>
+                        <span class="event-time">23:54 UTC</span>
+                    </h4>
+                    <h5 class="event-name">Full Moon</h5>
+                    <p class="event-description">The Moon will be located on the opposite side of the Earth as the Sun and its face will be will be fully illuminated. This full moon was known by early Native American tribes as the Corn Moon because the corn is harvested around this time of year. This moon is also known as the Harvest Moon. The Harvest Moon is the full moon that occurs closest to the September equinox each year.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/solar-system.png" alt="Planets in front of the sun">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">September 22</span>
+                        <span class="event-time">19:11 UTC</span>
+                    </h4>
+                    <h5 class="event-name">September Equinox</h5>
+                    <p class="event-description">The Sun will shine directly on the equator and there will be nearly equal amounts of day and night throughout the world. 
+                    This is also the first day of fall (autumnal equinox) in the Northern Hemisphere and the first day of spring (vernal equinox) in the Southern Hemisphere.</p>
+                </div>
+            </article>
+
+            <div class="month-divider">
+                <h3>October</h3>
+            </div>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/newmoon.png" alt="New Moon">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">October 6</span>
+                        <span class="event-time">11:05 UTC</span>
+                    </h4>
+                    <h5 class="event-name">New Moon</h5>
+                    <p class="event-description">Occurs approximately every 27 days. The Moon will be located on the same side of the Earth as the Sun and will not be visible in the night sky. This is the best time to observe faint objects such as galaxies and star clusters because there is no moonlight to interfere.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="event-image">
+                    <img src="/images/sky-events-chart/meteor-shower.png" alt="Fiery meteors falling thru sky">
+                </div>
+                <div class="event-details">
+                    <h4>
+                        <span class="event-date">October 7</span>
+                        <span class="event-time"></span>
+                    </h4>
+                    <h5 class="event-name">Draconids Meteor Shower</h5>
+                    <p class="event-description">The Draconids is a minor meteor shower producing only about 10 meteors per hour. It is produced by dust grains left behind by comet 21P Giacobini-Zinner. Best viewing is in the early evening instead of early morning like most other showers. The shower runs annually from October 6-10 and peaks this year on the the night of the 7th. This year, the new moon will leave dark skies for what should be an excellent show. Meteors will radiate from the constellation Draco, but can appear anywhere in the sky.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- use JavaScript includeHTML() to add footer html from separate file -->
+        <div w3-include-html-snip="/html/html-snips/footer-snip.html"></div>
+    </footer>
+
+    <!-- use JavaScript to add html snips from exterior files -->
+    <script>includeHTML()</script>
+
+    <!-- these scripts are located at the end of the body since their content is not critical to the loading of the page -->
+
+    <!-- these scripts calculate and update astro events displayed on the page -->
+    <script src="/js/libraries/astronomy.browser.js"></script>
+    <script src="/js/updateSkyEvents.js"></script>
+
+    <!-- this script updates the time in the header -->
+    <script src="/js/updateHeaderTime.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- preconnect does handshaking in advance so downloads are faster when called later -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+
+    <!-- external links for this page -->
+    <link rel="stylesheet" href="/css/membership.css">
+    <!-- use JavaScript includeHTML() to add html from separate file -->
+    <div w3-include-html-snip="/html/html-snips/head-snip.html"></div>
+    <!-- loading this script in the head so that the HTML it generates will be available for parsing as soon as possible -->
+    <script src="/js/includeHTML.js"></script>
+
+    <!-- page information-->    
+    <title>Shanghai Astronomy Club - Membership</title>
+    <meta name="author" content="BGG">
+    <meta name="title" content="Shanghai Astronomy Club - Membership">
+    <meta name="description" content="The Shanghai Astronomy Club is a group of likeminded people who love the stars.  Welcome to seasoned astronomers and curious hobiests alike.">
+    <meta name="keywords" content="Astronomy, Club, Shanghai"> <!--Set keywords for SE-->
+    
+</head>
+
+<body>
+        
+    <header>
+
+        <section class="top-photo">
+            <a href="/index.html">
+                <img src="/images/header/shanghai-stars-1200x627.jpg" alt="Shanghai skyline with stars above" >
+            </a>
+            <h1>SHANGHAI<br>Astronomy<br>Club</h1>
+            <p id="coordinates"> <span>31.2304° N,</span> <span>121.4737° E</span></p>
+            <!-- #time is a placeholder. Script will insert the current time in shanghai -->
+            <p id="time"></p>
+        </section>    
+    
+        <!-- use JavaScript includeHTML() to add nav bar html from separate file -->
+        <div w3-include-html-snip="/html/html-snips/nav-snip.html"></div>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>Become a Shanghai<br>Astronomy Club Member</h2>
+
+            <!--poster will show until the video loads-->
+            <!--alt message is provided for browsers that cannot view the video -->
+            <video width="1280" autoplay loop muted preload="auto"
+                poster="/video/star-party.png"> 
+                <source src="/video/star-party-1280x720.mp4" type="video/mp4">
+                Your browser does not support playing video.
+            </video>
+
+            <h3>Make new friends</h3>
+            <p>Attend club events, participate in club activities, including the annual members only gala. Our club welcomes men and women, from all ages, and from all walks of life. Astronomers are good people! </p>
+
+            <h3>See the stars</h3>
+            <img id="image1" src="/images/membership/telescope.png" alt="telescope on a tripod">
+            <p>Gain full access to club owned equimpment including a range of telescopes and astro imaging hardware. All free for members to use. Members are also welcome to use our club's dark sky observing site conveniently located on the outskirts of Shanghai.</p>
+            
+            <h3>Learn something new</h3>
+            <img id="image2" src="/images/membership/planet.png" alt="yellow ringed planet">
+            <p>Astronomy is a positive, relaxing and beautiful hobby which can keep you engaged for a lifetime. Attend our classes, workshops and monthly club meetings featuring visiting speakers.  Learn from people who are passionate about the sky.</p>
+            
+            <h3>Give back to your community</h3>
+            <p>Happiness comes from giving.  The Shanghai Astronomy Club offers many opportunities to be a contributor in your community by sharing your love of the stars with others. We are also active promoters of preserving a dark sky environment.</p>
+
+            <!-- I had trouble with this list interacting with the gift bag image when the width of the viewport changed. Solved the problem by putting them in a wrapper. -->
+            <div class="wrapper">
+                <div class="wrapper-left">
+                    <img id="image3" src="/images/membership/gift-bag.png" alt="gift bag with a pink bow">
+                </div>
+                <div class="wrapper-right">
+                    <h3>Free Stuff!</h3>
+                    <ul>Welcome package for new members:
+                        <li>Official SHAC Membership Pin</li>
+                        <li>SHAC Coffee Mug for cool nights</li>
+                        <li>Red Gel Flashlight</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="membership-banner">
+                <h2>Membership $99 per year</h2>
+            </div>
+        </section>
+
+        <section id="member-form">
+            <h3>Fill out the form below to become a member.</h3>
+
+            <!-- this form needs some backend support to actually do anything -->
+            <form 
+                method="POST" 
+                action="submit.txt"
+                target="_blank"
+                autocomplete="on">
+
+                <fieldset>
+                    <!-- legend makes a nice box linking related information together -->
+                    <legend>Your contact information</legend>
+                    
+                    <!-- inputs are all matched to a lable making it easier for screen readers to navigate -->
+                    <label for="name">Full Name:</label>
+                    <input id="name" required
+                        type="text"
+                        name="name"><br>
+
+                    <label for="phone">Phone number:</label>
+                    <!-- using type atributes for "tel" and "email" makes interactions with the user's mobile device more intuitive -->
+                    <input id="phone" required
+                        type="tel" 
+                        name="phone"
+                        placeholder="Please include area code"><br>
+
+                    <label for="email">Email:</label>
+                    <input id="email" required
+                        type="email" 
+                        name="email"
+                        placeholder="someone@somewhere.com"><br>
+
+                    <input id="subscribe" checked 
+                        name="subscribe" 
+                        type="checkbox" 
+                        value="subscribe">
+                    <label for="subscribe">Add me to your email list</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership</legend>
+
+                    <p>Which membership would you prefer?</p>
+                    <input id="one-month"
+                        name="membertype" 
+                        type="radio"  
+                        value="Monthly"> 
+                    <label for="one-month">$9 Monthly Membership</label><br>
+                    <input id="six-month"
+                        name="membertype" 
+                        type="radio" 
+                        value="Semiannual"> 
+                    <label for="six-month">$49 Six Month Membership</label><br>
+                    <!-- setting this as the default option -->
+                    <input id="annual" checked
+                        name="membertype" 
+                        type="radio" 
+                        value="Annual"> 
+                    <label for="annual">$99 Annual Membership</label><br>
+                    <input id="family"
+                        name="membertype" 
+                        type="radio" 
+                        value="Family">
+                    <label for="family">$150 Annual Family Membership (2 adults plus kids)</label><br>
+
+                    <label for="notes">Notes:</label><br>
+                    <textarea id="notes" 
+                        name="notes" 
+                        rows="5">
+                    </textarea>
+                </fieldset>
+
+                <input id="send_to" 
+                type="hidden" 
+                name="send_to" 
+                value="brentgratias@hotmail.com">
+                <button id="submit">Send My Information</button>
+            </form>
+        </section>
+  
+    </main>
+
+    <footer>
+        <!-- use JavaScript includeHTML() to add footer html from separate file -->
+        <div w3-include-html-snip="/html/html-snips/footer-snip.html"></div>
+    </footer>
+
+    <!-- use JavaScript to add html snips from exterior files -->
+    <script>includeHTML()</script>
+
+    <!-- this script updates the time in the header -->
+    <!-- it is located at the end of the body since it's content is not critical to the loading of the page -->
+    <script src="/js/updateHeaderTime.js"></script>
+
+</body>
+
+</html>

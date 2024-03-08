@@ -1,0 +1,40 @@
+nav{
+    margin-top: var(--space-m);
+}
+
+li{
+    margin-left: 50px;
+}
+
+#sitemap img {
+    width: 80%;
+}
+
+
+#mockup-wide, #mockup-mobile{
+    display: inline-flex;
+
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#mockup-wide a{
+    width: 18%;
+}
+
+#mockup-mobile a{
+    width: 10%;
+}
+
+#mockup-wide a img, 
+#mockup-mobile a img{
+    width: 100%;
+    height: auto;
+    outline: 1px solid grey;
+}

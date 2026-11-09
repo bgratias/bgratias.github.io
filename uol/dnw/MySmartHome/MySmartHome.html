@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MySmartHome Source Code</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+    >
+</head>
+<body>
+    <p><a href="../../index.html">Back to home page</a></p>
+
+    <h1>MySmartHome Source Code</h1>
+
+    <h2>index.js</h2>
+    <pre><code id="index-source" class="language-javascript">Loading...</code></pre>
+
+    <h2>routes/main.js</h2>
+    <pre><code id="routes-source" class="language-javascript">Loading...</code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <script>
+        const sources = [
+            ["./index.js", "index-source"],
+            ["./routes/main.js", "routes-source"]
+        ];
+
+        sources.forEach(([file, elementId]) => {
+            fetch(file)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Unable to load source: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then((source) => {
+                    const element = document.querySelector(`#${elementId}`);
+                    element.textContent = source;
+                    Prism.highlightElement(element);
+                })
+                .catch((error) => {
+                    document.querySelector(`#${elementId}`).textContent =
+                        `Unable to display source: ${error.message}`;
+                });
+        });
+    </script>
+</body>
+</html>

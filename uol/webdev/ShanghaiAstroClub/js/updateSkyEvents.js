@@ -100,35 +100,35 @@ function getMoonPhase(){
 
     //match the numerical moon phase to the appropriate moon image
     if(currentMoonPhase >= 337.5 || currentMoonPhase < 22.5 ){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/001-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/001-moon.svg"
         moonPhaseText = "New Moon"
         console.log(moonPhaseText);
     }else if(currentMoonPhase >=22.5 && currentMoonPhase < 67.5){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/002-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/002-moon.svg"
         moonPhaseText = "Waxing Crescent"
         console.log(moonPhaseText);
     }else if(currentMoonPhase >=67.5 && currentMoonPhase < 112.5){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/003-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/003-moon.svg"
         moonPhaseText = "First Quarter"
         console.log(moonPhaseText);
     }else if(currentMoonPhase >=112.5 && currentMoonPhase < 157.5){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/004-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/004-moon.svg"
         moonPhaseText = "Waxing Gibbous"
         console.log(moonPhaseText);
     }else if(currentMoonPhase >=157.5 && currentMoonPhase < 202.5){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/005-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/005-moon.svg"
         moonPhaseText = "Full Moon"
         console.log(moonPhaseText);
     }else if(currentMoonPhase >=202.5 && currentMoonPhase < 247.5){
         console.log("Wanning Gibbous"); 
-        moonPhaseImage = "/images/sky-events-chart/moonphases/006-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/006-moon.svg"
         moonPhaseText = "Wanning Gibbous"
     }else if(currentMoonPhase >=247.5 && currentMoonPhase < 292.5){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/007-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/007-moon.svg"
         moonPhaseText = "Third Quarter"
         console.log(moonPhaseText);
     }else if(currentMoonPhase >=292.5 && currentMoonPhase < 337.5){
-        moonPhaseImage = "/images/sky-events-chart/moonphases/008-moon.svg"
+        moonPhaseImage = "images/sky-events-chart/moonphases/008-moon.svg"
         moonPhaseText = "Wanning Crescent"
         console.log(moonPhaseText);
     }else{
